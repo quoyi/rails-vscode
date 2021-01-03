@@ -3,6 +3,11 @@
   "displayName": "Rails Snippets",
   "description": "10k+ rails snippets forked hridoy/rails-vscode",
   "version": "0.0.1",
+  "publisher": "Quoyi",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/quoyi/rails-vscode"
+  },
   "icon": "img/rails.png",
   "galleryBanner": {
     "color": "#1E81C1",

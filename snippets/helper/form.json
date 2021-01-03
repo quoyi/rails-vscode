@@ -1,12 +1,12 @@
 {
   "form-for": {
     "prefix": "form-for",
-    "body": "<%= form_for ${1:@object} do |${2:f}| %>\r\n\t<%= render 'layouts/error_messages', f: f.object %>\r\n\t\t\r\n\t<!-- form_for @object, html: { multipart: true }, do |f| -->\r\n\t<!-- form_for @object, html: { class: \"classname\" }, do |f| -->\r\n\r\n\t$3\r\n<% end %>\r\n  ",
+    "body": "<%= form_for ${1:@object} do |${2:f}| %>\n\t<%= render 'layouts/error_messages', f: f.object %>\n\t\t\n\t<!-- form_for @object, html: { multipart: true }, do |f| -->\n\t<!-- form_for @object, html: { class: \"classname\" }, do |f| -->\n\n\t$3\n<% end %>\n  ",
     "description": "form_for"
   },
   "form-for-with-error": {
     "prefix": "form-for-with-errors",
-    "body": "error_messages_for :${1:model}\r\n\r\nform_for @${2:$1} do |f|\r\n  $0\r\n",
+    "body": "error_messages_for :${1:model}\n\nform_for @${2:$1} do |f|\n  $0\n",
     "description": "form_for with errors"
   },
   "form-for-label": {
@@ -26,27 +26,27 @@
   },
   "form-for-file-field": {
     "prefix": "form-for-file-field",
-    "body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.file_field :${2:attribute} %>\r\n  ",
+    "body": "<%= ${1:f}.label :${2:attribute} %><br />\n<%= ${1:f}.file_field :${2:attribute} %>\n  ",
     "description": "ERB file field"
   },
   "form-for-password-field": {
     "prefix": "form-for-password-field",
-    "body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.password_field :${2:attribute} %>\r\n",
+    "body": "<%= ${1:f}.label :${2:attribute} %><br />\n<%= ${1:f}.password_field :${2:attribute} %>\n",
     "description": "form_for password_field"
   },
   "form-for-text-area": {
     "prefix": "form-for-text-area",
-    "body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.text_area :${2:attribute} %>\r\n",
+    "body": "<%= ${1:f}.label :${2:attribute} %><br />\n<%= ${1:f}.text_area :${2:attribute} %>\n",
     "description": "ERB text area"
   },
   "form-for-text-field": {
     "prefix": "form-for-text-field",
-    "body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.text_field :${2:attribute} %>\r\n",
+    "body": "<%= ${1:f}.label :${2:attribute} %><br />\n<%= ${1:f}.text_field :${2:attribute} %>\n",
     "description": "ERB text field"
   },
   "form-for-check-box": {
     "prefix": "form-for-check-box",
-    "body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.check_box :${2:attribute} %>\r\n",
+    "body": "<%= ${1:f}.label :${2:attribute} %><br />\n<%= ${1:f}.check_box :${2:attribute} %>\n",
     "description": "ERB check box"
   },
   "form-for-submit": {

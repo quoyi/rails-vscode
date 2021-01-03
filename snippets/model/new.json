@@ -11,17 +11,17 @@
   },
   "active-record-model": {
     "prefix": "active-record-model",
-    "body": "class ${1:User} < ActiveRecord::Base\r\n\r\n\t$2\r\n\r\n\tprivate\r\n\t\t$3\r\nend\r\n",
+    "body": "class ${1:User} < ActiveRecord::Base\n\n\t$2\n\n\tprivate\n\t\t$3\nend\n",
     "description": "Rails Active Record Model"
   },
   "binding": {
     "prefix": "binding",
-    "body": "\r\nbinding.pry\r\n",
+    "body": "\nbinding.pry\n",
     "description": ""
   },
   "verify": {
     "prefix": "verify",
-    "body": "verify only: [:$1], method: :post, render: { status: 500, text: \"use HTTP-POST\" }\r\n",
+    "body": "verify only: [:$1], method: :post, render: { status: 500, text: \"use HTTP-POST\" }\n",
     "description": "verify — render"
   },
   "accepts-nested-attributes-for": {

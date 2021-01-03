@@ -1,22 +1,22 @@
 {
   "assert": {
     "prefix": "assert",
-    "body": "assert(${1:var} = assigns(:${1}), \"Cannot find @${1}\")\r\n$0",
+    "body": "assert(${1:var} = assigns(:${1}), \"Cannot find @${1}\")\n$0",
     "description": "assert(var = assigns(:var))"
   },
   "assert-select": {
     "prefix": "assert-select",
-    "body": "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}}${6: do\r\n\t$0\r\nend}",
+    "body": "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}}${6: do\n\t$0\nend}",
     "description": "assert_select"
   },
   "assert-difference": {
     "prefix": "assert-difference",
-    "body": "assert_difference \"${1:Model}.${2:count}\", ${3:1} do\r\n  $0\r\nend",
+    "body": "assert_difference \"${1:Model}.${2:count}\", ${3:1} do\n  $0\nend",
     "description": "assert_difference"
   },
   "assert-no-difference": {
     "prefix": "assert-no-difference",
-    "body": "assert_no_difference \"${1:Model}.${2:count}\" do\r\n  $0\r\nend",
+    "body": "assert_no_difference \"${1:Model}.${2:count}\" do\n  $0\nend",
     "description": "assert_no_difference"
   },
   "assert-redirected-to": {

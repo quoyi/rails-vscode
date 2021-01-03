@@ -106,7 +106,7 @@
   },
   "render-update": {
     "prefix": "render-update",
-    "body": "render :update do |${2:page}|\r\n\t$2.$0\r\nend",
+    "body": "render :update do |${2:page}|\n\t$2.$0\nend",
     "description": "render (update)"
   }
 }

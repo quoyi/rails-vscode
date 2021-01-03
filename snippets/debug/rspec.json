@@ -1,7 +1,7 @@
 {
   "bb": {
     "prefix": "before-block",
-    "body": "before do\r\n\t$1\r\nend\r\n",
+    "body": "before do\n\t$1\nend\n",
     "description": "RSpec Before Block"
   },
   "bi": {
@@ -16,17 +16,17 @@
   },
   "cont": {
     "prefix": "context",
-    "body": "context \"${1:a context}\" do\r\n\t$2\r\nend\r\n",
+    "body": "context \"${1:a context}\" do\n\t$2\nend\n",
     "description": "RSpec Context Block"
   },
   "dci": {
     "prefix": "describe-context-it",
-    "body": "describe \"${1:something to be performed}\" do\r\n  context \"${2:under condition}\" do\r\n    it \"${3:behaves like}\" do\r\n      $4\r\n    end\r\n  end\r\nend\r\n",
+    "body": "describe \"${1:something to be performed}\" do\n  context \"${2:under condition}\" do\n    it \"${3:behaves like}\" do\n      $4\n    end\n  end\nend\n",
     "description": "RSpec Describe + Context + It Block"
   },
   "desc": {
     "prefix": "describe",
-    "body": "describe \"${1:a specification}\" do\r\n\t$2\r\nend\r\n",
+    "body": "describe \"${1:a specification}\" do\n\t$2\nend\n",
     "description": "RSpec Describe Block"
   },
   "exp": {
@@ -51,7 +51,7 @@
   },
   "itb": {
     "prefix": "it-block",
-    "body": "it \"${1:description}\" do\r\n\t$2\r\nend\r\n",
+    "body": "it \"${1:description}\" do\n\t$2\nend\n",
     "description": "RSpec It Block"
   },
   "let": {
@@ -61,7 +61,7 @@
   },
   "pen": {
     "prefix": "pending",
-    "body": "pending \"${1:a specification}\" do\r\n\t$2\r\nend\r\n",
+    "body": "pending \"${1:a specification}\" do\n\t$2\nend\n",
     "description": "RSpec Pending Block"
   },
   "shb": {

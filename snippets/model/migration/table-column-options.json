@@ -6,17 +6,17 @@
   },
   "limit": {
     "prefix": ":limit",
-    "body": ":limit => ${1:size} #By default SQL String limit 255 character \r\n#Ex:- :limit => 40",
+    "body": ":limit => ${1:size} #By default SQL String limit 255 character \n#Ex:- :limit => 40",
     "description": "SQL character limit size"
   },
   "default": {
     "prefix": ":default",
-    "body": ":default => ${1: value}\r\n#Ex:- :default =>''",
+    "body": ":default => ${1: value}\n#Ex:- :default =>''",
     "description": "Default Value"
   },
   "null": {
     "prefix": ":null",
-    "body": ":null => ${1: true/false}\r\n#Ex:- :null => false",
+    "body": ":null => ${1: true/false}\n#Ex:- :null => false",
     "description": "Null vale true or false"
   },
   "precision": {

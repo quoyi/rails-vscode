@@ -1,22 +1,22 @@
 {
   "for-loop": {
     "prefix": "for-loop",
-    "body": "<% if !${1:list}.blank? %>\r\n  <% for ${2:item} in ${1} %>\r\n    $3\r\n  <% end %>\r\n<% else %>\r\n",
+    "body": "<% if !${1:list}.blank? %>\n  <% for ${2:item} in ${1} %>\n    $3\n  <% end %>\n<% else %>\n",
     "description": "ERB For loop"
   },
   "each": {
     "prefix": "each",
-    "body": "\r\n<% ${1:@plural}.each do |${2:single}| %>\r\n\t$0\r\n<% end %>\r\n",
+    "body": "\n<% ${1:@plural}.each do |${2:single}| %>\n\t$0\n<% end %>\n",
     "description": "ERB each"
   },
   "if": {
     "prefix": "if",
-    "body": "\r\n<% if ${1:condition} %>\r\n\t$2\r\n<% end %>\r\n",
+    "body": "\n<% if ${1:condition} %>\n\t$2\n<% end %>\n",
     "description": "ERB if"
   },
   "if-else": {
     "prefix": "if-else",
-    "body": "\r\n<% if ${1:condition} %>\r\n\t$2\r\n\t<% else %>\r\n\t$3\r\n<% end %>\r\n",
+    "body": "\n<% if ${1:condition} %>\n\t$2\n\t<% else %>\n\t$3\n<% end %>\n",
     "description": "ERB if else"
   },
   "if-unless-inline": {
@@ -36,7 +36,7 @@
   },
   "end": {
     "prefix": "end",
-    "body": "\r\n<% end %>\r\n",
+    "body": "\n<% end %>\n",
     "description": "ERB end"
   },
   "emded": {
@@ -76,7 +76,7 @@
   },
   "bye-bug": {
     "prefix": "bye-bug",
-    "body": "\r\nbyebug\r\n",
+    "body": "\nbyebug\n",
     "description": "buy bug"
   },
   "buy-bug-erb": {

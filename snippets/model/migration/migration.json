@@ -1,22 +1,22 @@
 {
   "def-change": {
     "prefix": "def-change",
-    "body": "def change \n\tcreate_table :${1:table_name} do |t|\r\n\t  t.${2:column_type} :${3:column_name}\r\n\r\n\t  t.timestamps\r\n\tend\r\nend",
+    "body": "def change \n\tcreate_table :${1:table_name} do |t|\n\t  t.${2:column_type} :${3:column_name}\n\n\t  t.timestamps\n\tend\nend",
     "description": "def change"
   },
   "def-up": {
     "prefix": "def-up",
-    "body": "def up \n\tcreate_table :${1:table_name} do |t|\r\n\t  t.${2:column_type} :${3:column_name}\r\n\r\n\t  t.timestamps\r\n\tend\r\nend",
+    "body": "def up \n\tcreate_table :${1:table_name} do |t|\n\t  t.${2:column_type} :${3:column_name}\n\n\t  t.timestamps\n\tend\nend",
     "description": "def up"
   },
   "def-down": {
     "prefix": "def-down",
-    "body": "def down \n\tdrop_table :${1:table_name}\r\nend",
+    "body": "def down \n\tdrop_table :${1:table_name}\nend",
     "description": "def down"
   },
   "create-table": {
     "prefix": "create-table",
-    "body": "create_table :${1:table_name} do |t|\r\n  t.${2:column_type} :${3:column_name}\r\n\r\n  t.timestamps\r\nend\r\n",
+    "body": "create_table :${1:table_name} do |t|\n  t.${2:column_type} :${3:column_name}\n\n  t.timestamps\nend\n",
     "description": "Create Table"
   },
   "drop-table": {
@@ -31,7 +31,7 @@
   },
   "add-column": {
     "prefix": "add-comun",
-    "body": "add_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}\r\n#Ex:- add_column(\"admin_users\", \"username\", :string, :limit =>25, :after => \"email\")",
+    "body": "add_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}\n#Ex:- add_column(\"admin_users\", \"username\", :string, :limit =>25, :after => \"email\")",
     "description": "Add Column"
   },
   "remove-column": {
@@ -41,17 +41,17 @@
   },
   "change-column": {
     "prefix": "change-column",
-    "body": "change_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}\r\n#Ex:- change_column(\"admin_users\", \"email\", :string, :limit =>25)",
+    "body": "change_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}\n#Ex:- change_column(\"admin_users\", \"email\", :string, :limit =>25)",
     "description": "Change Column"
   },
   "rename-column": {
     "prefix": "rename-column",
-    "body": "rename_column :${1:table_name}, :${2:old_column_name}, :${3:new_column_name}\r\n#Ex:- rename_column(\"admin_users\", \"pasword\",\"hashed_pasword\")",
+    "body": "rename_column :${1:table_name}, :${2:old_column_name}, :${3:new_column_name}\n#Ex:- rename_column(\"admin_users\", \"pasword\",\"hashed_pasword\")",
     "description": "Rename Column"
   },
   "add-index": {
     "prefix": "add-index",
-    "body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:options}: \"${6:custom_index_name}\"}\r\n#Ex:- add_index(\"admin_users\", \"username\")",
+    "body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:options}: \"${6:custom_index_name}\"}\n#Ex:- add_index(\"admin_users\", \"username\")",
     "description": "Add Index"
   },
   "remove-index": {
@@ -61,7 +61,7 @@
   },
   "t.column": {
     "prefix": "t.column",
-    "body": "t.column ${1:column_name}, :${2:column_type}\r\n# Example: t.column \"first_name\", :string",
+    "body": "t.column ${1:column_name}, :${2:column_type}\n# Example: t.column \"first_name\", :string",
     "description": "Create Column in Table"
   },
   "t.binary": {
@@ -71,22 +71,22 @@
   },
   "t.boolean": {
     "prefix": "t.boolean",
-    "body": "t.boolean :${1:title}\r\n",
+    "body": "t.boolean :${1:title}\n",
     "description": "t.boolean"
   },
   "t.time": {
     "prefix": "t.time",
-    "body": "t.time :${1:title}\r\n",
+    "body": "t.time :${1:title}\n",
     "description": "t.time"
   },
   "t.date": {
     "prefix": "t.date",
-    "body": "t.date :${1:title}\r\n",
+    "body": "t.date :${1:title}\n",
     "description": "t.date"
   },
   "t.datetime": {
     "prefix": "t.datetime",
-    "body": "t.datetime ${\"created_at\"}\r\n${\"updated_at\"}",
+    "body": "t.datetime ${\"created_at\"}\n${\"updated_at\"}",
     "description": "t.datetime"
   },
   "t.timestamps": {

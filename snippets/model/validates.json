@@ -6,7 +6,7 @@
   },
   "validates": {
     "prefix": "validates",
-    "body": "validates :${1:attribute}${2:, presence: true}${3:, uniqueness: { case_sensitive: false \\}}${4:, length: {maximum: 50\\}}${5:, format: { with: ConstantData::VALID_EMAIL_REGEX \\}}${6:, if: :method_name?}\r\n\r\n",
+    "body": "validates :${1:attribute}${2:, presence: true}${3:, uniqueness: { case_sensitive: false \\}}${4:, length: {maximum: 50\\}}${5:, format: { with: ConstantData::VALID_EMAIL_REGEX \\}}${6:, if: :method_name?}\n\n",
     "description": "Ruby validates"
   },
   "validates-acceptance-of": {

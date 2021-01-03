@@ -11,17 +11,17 @@
   },
   "resources_do": {
     "prefix": "resources-do",
-    "body": "resources :${1:res_name} do\r\n  $2\r\nend",
+    "body": "resources :${1:res_name} do\n  $2\nend",
     "description": "resources with an empty params block"
   },
   "resources_do_collection": {
     "prefix": "resources-do-collection",
-    "body": "resources :${1:res_name} do\r\n  collection do\r\n    ${2:get} :${3:action}\r\n  end\r\nend",
+    "body": "resources :${1:res_name} do\n  collection do\n    ${2:get} :${3:action}\n  end\nend",
     "description": "resources with a custom collection block"
   },
   "resources_do_member": {
     "prefix": "resources-do-member",
-    "body": "resources :${1:res_name} do\r\n  member do\r\n    ${2:get} :${3:action}\r\n  end\r\nend",
+    "body": "resources :${1:res_name} do\n  member do\n    ${2:get} :${3:action}\n  end\nend",
     "description": "resources with a custom member block"
   }
 }

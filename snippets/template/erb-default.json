@@ -36,7 +36,7 @@
   },
   "end": {
     "prefix": "end",
-    "body": "\n<% end %>\n",
+    "body": "<% end %>",
     "description": "ERB end"
   },
   "emded": {
@@ -83,5 +83,20 @@
     "prefix": "buy-bug-erb",
     "body": "<%= debug(params) if Rails.env.development? %>",
     "description": "$LABEL"
+  },
+  "pry": {
+    "prefix": "pry",
+    "body": "<%= binding.pry %>",
+    "description": "binding.pry"
+  },
+  "image_tag": {
+    "prefix": "image_tag",
+    "body": "<%= image_tag src:$1, alt: '$2' %>",
+    "description": "image_tag"
+  },
+  "image_pack_tag": {
+    "prefix": "image_pack_tag",
+    "body": "<%= image_pack_tag src:$1, alt: '$2' %>",
+    "description": "image_pack_tag"
   }
 }

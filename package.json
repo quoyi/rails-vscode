@@ -24,6 +24,10 @@
     "snippets": [
       {
         "language": "ruby",
+        "path": "./snippets/ruby-core.json"
+      },
+      {
+        "language": "ruby",
         "path": "./snippets/attributes/attributes-rb.json"
       },
       {
@@ -53,18 +57,6 @@
       {
         "language": "ruby",
         "path": "./snippets/gem/gem.json"
-      },
-      {
-        "language": "ruby",
-        "path": "./snippets/helper/form.json"
-      },
-      {
-        "language": "ruby",
-        "path": "./snippets/helper/form-bootstrap.json"
-      },
-      {
-        "language": "ruby",
-        "path": "./snippets/helper/link.json"
       },
       {
         "language": "ruby",
@@ -124,15 +116,23 @@
       },
       {
         "language": "erb",
+        "path": "./snippets/template/erb-default.json"
+      },
+      {
+        "language": "erb",
         "path": "./snippets/template/erb-render.json"
       },
       {
         "language": "erb",
-        "path": "./snippets/template/erb-default.json"
+        "path": "./snippets/helper/form.json"
       },
       {
-        "language": "ruby",
-        "path": "./snippets/ruby-core.json"
+        "language": "erb",
+        "path": "./snippets/helper/form-bootstrap.json"
+      },
+      {
+        "language": "erb",
+        "path": "./snippets/helper/link.json"
       }
     ],
     "languages": [

@@ -1,12 +1,38 @@
 {
   "form-for-bootstrap": {
     "prefix": "form-for-bootstrap",
-    "body": "<%= form_for ${1:@object}, html: { class: \"form-horizontal\" } do |${2:f}| %>\n\t<%= render 'layouts/error_messages', ${2:f}: ${2:f}.object %>\n\n\t<div class=\"control-group\">\n\t\t<%= ${2:f}.label :${3:attribute}, class: \"control-label\" %>\n\t\t<div class=\"controls\">\n\t\t\t<%= ${2:f}.text_field :${3:attribute} %>\n\t\t</div>\n\t</div>\n\n\t$4\n\n\t<div class=\"control-group\">\n\t\t<div class=\"controls\">\n\t\t\t<%= ${2:f}.submit class: \"btn btn-primary\" %>\n\t\t</div>\n\t</div>\n\t\t\n<% end %>\n",
+    "body": [
+      "<%= form_for ${1:@object}, html: { class: 'form-horizontal' } do |${2:f}| %>",
+      "\t<%= render 'layouts/error_messages', ${2:f}: ${2:f}.object %>",
+      "",
+      "\t<div class=\"control-group\">",
+      "\t\t<%= ${2}.label :${3:attribute}, class: 'control-label' %>",
+      "\t\t<div class=\"controls\">",
+      "\t\t\t<%= ${2}.text_field :${3:attribute} %>",
+      "\t\t</div>",
+      "\t</div>",
+      "\t$0",
+      "\t<div class=\"control-group\">",
+      "\t\t<div class=\"controls\">",
+      "\t\t\t<%= ${2:f}.submit class: 'btn btn-primary' %>",
+      "\t\t</div>",
+      "\t</div>",
+      "<% end %>"
+    ],
     "description": "form_for with twitter bootstrap"
   },
   "form-for-text-field-bootstrap": {
     "prefix": "form-for-text-field-bootstrap",
-    "body": "<div class=\"control-group\">\n\t<%= ${1:f}.label :${2:attribute}, class: \"control-label\" %>\n\t<div class=\"controls\">\n\t\t<%= ${1:f}.text_field :${2:attribute} %>\n\t</div>\n</div>\n",
+    "body": [
+      "<div class=\"control-group\">",
+      "\t<%= ${1:f}.label :${2:attribute}, class: 'control-label' %>",
+      "\t<div class=\"controls\">",
+      "\t\t<%= ${1:f}.text_field :${2:attribute} %>",
+      "\t</div>",
+      "</div>",
+      "",
+      "$0"
+    ],
     "description": "text field with twitter bootstrap"
   }
 }

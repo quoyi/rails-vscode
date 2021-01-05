@@ -139,18 +139,6 @@
         "path": "./snippets/helper/link.json"
       }
     ],
-    "grammars": [
-      {
-        "language": "ruby",
-        "scopeName": "source.ruby",
-        "path": "./syntaxes/ruby.tmLanguage"
-      },
-      {
-        "language": "erb",
-        "scopeName": "text.html.erb",
-        "path": "./syntaxes/erb.tmLanguage"
-      }
-    ],
     "languages": [
       {
         "id": "ruby",

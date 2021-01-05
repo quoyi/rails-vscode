@@ -1,66 +1,226 @@
 {
   "assert": {
     "prefix": "assert",
-    "body": "assert(${1:var} = assigns(:${1}), 'Cannot find @${1}')",
-    "description": "assert(var = assigns(:var))"
+    "body": "assert ${1:test}${2:, 'msg'}",
+    "description": "Ensures that test is true"
   },
-  "assert-select": {
-    "prefix": "assert-select",
-    "body": "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}}",
-    "description": "assert_select"
-  },
-  "assert-select-block": {
-    "prefix": "assert-select-block",
-    "body": [
-      "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}} do",
-      "\t$0",
-      "end"
-    ],
-    "description": "assert_select with block"
+  "assert-not": {
+    "prefix": "assert-not",
+    "body": "assert_not ${1:test}${2:, 'msg'}",
+    "description": "Ensures that test is false"
   },
   "assert-equal": {
     "prefix": "assert-equal",
-    "body": "assert_equal ${1:expect}, ${2:actual}",
-    "description": "assert_equal"
+    "body": "assert_equal ${1:expected}, ${2:actual}${3:, 'msg'}",
+    "description": "Ensures that expected == actual is true"
   },
+  "assert-not-equal": {
+    "prefix": "assert-not-equal",
+    "body": "assert_not_equal ${1:expected}, ${2:actual}${3:, 'msg'}",
+    "description": "Ensures that expected != actual is true"
+  },
+  "assert-same": {
+    "prefix": "assert-same",
+    "body": "assert_same ${1:expected}, ${2:actual}${3:, 'msg'}",
+    "description": "Ensures that expected.equal?(actual) is true"
+  },
+  "assert-not-same": {
+    "prefix": "assert-not-same",
+    "body": "assert_not_same ${1:expected}, ${2:actual}${3:, 'msg'}",
+    "description": "Ensures that expected.equal?(actual) is true"
+  },
+  "assert-nil": {
+    "prefix": "assert-nil",
+    "body": "assert_nil ${1:obj}${2:, 'msg'}",
+    "description": "Ensures that obj.nil? is true"
+  },
+  "assert-not-nil": {
+    "prefix": "assert-not-nil",
+    "body": "assert_not_nil ${1:obj}${2:, 'msg'}",
+    "description": "Ensures that obj.nil? is false"
+  },
+  "assert-empty": {
+    "prefix": "assert-empty",
+    "body": "assert_empty ${1:obj}${2:, 'msg'}",
+    "description": "Ensures that obj is empty?"
+  },
+  "assert-not-empty": {
+    "prefix": "assert-not-empty",
+    "body": "assert_not_empty ${1:obj}${2:, 'msg'}",
+    "description": "Ensures that obj is not empty?"
+  },
+  "assert-match": {
+    "prefix": "assert-match",
+    "body": "assert_match ${1:regexp}, ${2:string}${3:, 'msg'}",
+    "description": "Ensures that a string matches the regular expression"
+  },
+  "assert-not-match": {
+    "prefix": "assert-not-match",
+    "body": "assert_not_match ${1:regexp}, ${2:string}${3:, 'msg'}",
+    "description": "Ensures that a string doesn't match the regular expression"
+  },
+  "assert-includes": {
+    "prefix": "assert-includes",
+    "body": "assert_includes ${1:collection}, ${2:obj}${3:, 'msg'}",
+    "description": "Ensures that obj is in collection"
+  },
+  "assert-not-includes": {
+    "prefix": "assert-not-includes",
+    "body": "assert_not_includes ${1:collection}, ${2:obj}${3:, 'msg'}",
+    "description": "Ensures that obj is not in collection"
+  },
+  "assert-in-delta": {
+    "prefix": "assert-in-delta",
+    "body": "assert_in_delta ${1:expected}, ${2:actual}${3:, 'delta'}${4:, 'msg'}",
+    "description": "Ensures that the numbers expected and actual are within delta of each other"
+  },
+  "assert-not-in-delta": {
+    "prefix": "assert-not-in-delta",
+    "body": "assert_not_in_delta ${1:expected}, ${2:actual}${3:, 'delta'}${4:, 'msg'}",
+    "description": "Ensures that the numbers expected and actual are not within delta of each other"
+  },
+  "assert-in-epsilon": {
+    "prefix": "assert-in-epsilon",
+    "body": "assert_in_epsilon ${1:expected}, ${2:actual}${3:, 'epsilon'}${4:, 'msg'}",
+    "description": "Ensures that the numbers expected and actual have a relative error less than epsilon"
+  },
+  "assert-not-in-epsilon": {
+    "prefix": "assert-not-in-epsilon",
+    "body": "assert_not_in_epsilon ${1:expected}, ${2:actual}${3:, 'epsilon'}${4:, 'msg'}",
+    "description": "Ensures that the numbers expected and actual have a relative error not less than epsilon"
+  },
+  "assert-throws": {
+    "prefix": "assert-throws",
+    "body": "assert_throws(${1:symbol}${2:, 'msg'}) { ${3:block} }",
+    "description": "Ensures that the given block throws the symbol"
+  },
+  "assert-raises": {
+    "prefix": "assert-raises",
+    "body": "assert_raises(${1:exception1}${2:, ${3:exception2}}) { ${4:block} }",
+    "description": "Ensures that the given block raises one of the given exceptions"
+  },
+  "assert-instance-of": {
+    "prefix": "assert-instance-of",
+    "body": "assert_instance_of ${1:class}, ${2:obj}${3:, 'msg'}",
+    "description": "Ensures that obj is an instance of class"
+  },
+  "assert-not-instance-of": {
+    "prefix": "assert-not-instance-of",
+    "body": "assert_not_instance_of ${1:class}, ${2:obj}${3:, 'msg'}",
+    "description": "Ensures that obj is not an instance of class"
+  },
+  "assert-kind-of": {
+    "prefix": "assert-kind-of",
+    "body": "assert_kind_of ${1:class}, ${2:obj}${3:, 'msg'}",
+    "description": "Ensures that obj is an instance of class or is descending from it"
+  },
+  "assert-not-kind-of": {
+    "prefix": "assert-not-kind-of",
+    "body": "assert_not_kind_of ${1:class}, ${2:obj}${3:, 'msg'}",
+    "description": "Ensures that obj is not an instance of class and is not descending from it"
+  },
+  "assert-respond-to": {
+    "prefix": "assert-respond-to",
+    "body": "assert_respond_to ${1:obj}, ${2:symbol}${3:, 'msg'}",
+    "description": "Ensures that obj responds to symbol"
+  },
+  "assert-not-respond-to": {
+    "prefix": "assert-not-respond-to",
+    "body": "assert_not_respond_to ${1:obj}, ${2:symbol}${3:, 'msg'}",
+    "description": "Ensures that obj does not respond to symbol"
+  },
+  "assert-operator": {
+    "prefix": "assert-operator",
+    "body": "assert_operator ${1:obj1}, ${2:operator}${3:, 'obj2'}${4:, 'msg'}",
+    "description": "Ensures that obj1.operator(obj2) is true"
+  },
+  "assert-not-operator": {
+    "prefix": "assert-not-operator",
+    "body": "assert_not_operator ${1:obj1}, ${2:operator}${3:, 'obj2'}${4:, 'msg'}",
+    "description": "Ensures that obj1.operator(obj2) is false"
+  },
+  "assert-predicate": {
+    "prefix": "assert-predicate",
+    "body": "assert_predicate ${1:obj}, ${2:predicate}${3:, 'msg'}",
+    "description": "Ensures that obj.predicate is true, e.g. assert_predicate str, :empty?"
+  },
+  "assert-not-predicate": {
+    "prefix": "assert-not-predicate",
+    "body": "assert_not_predicate ${1:obj}, ${2:predicate}${3:, 'msg'}",
+    "description": "Ensures that obj.predicate is false, e.g. assert_not_predicate str, :empty?"
+  },
+  "flunk": {
+    "prefix": "flunk",
+    "body": "flunk ${1:'msg'}",
+    "description": "Ensures failure. This is useful to explicitly mark a test that isn't finished yet"
+  },
+
   "assert-difference": {
     "prefix": "assert-difference",
     "body": [
-      "assert_difference '${1:Model}.${2:count}', ${3:1} do",
+      "assert_difference '${1:Model}.${2:count}', ${3:1}${4:, message: '${5:msg}'} do",
       "\t$0",
       "end"
     ],
-    "description": "assert_difference"
+    "description": "Test numeric difference between the return value of an expression as a result of what is evaluated in the yielded block"
   },
   "assert-no-difference": {
     "prefix": "assert-no-difference",
     "body": [
-      "assert_no_difference '${1:Model}.${2:count}' do",
+      "assert_no_difference '${1:Model}.${2:count}'${3:, message: '${4:msg}'} do",
       "\t$0",
       "end"
     ],
-    "description": "assert_no_difference"
+    "description": "Asserts that the numeric result of evaluating an expression is not changed before and after invoking the passed in block"
   },
-  "assert-redirected-to": {
-    "prefix": "assert-redirected-to",
-    "body": "assert_redirected_to ${2:action: '${1:index}'}",
-    "description": "assert_redirected_to"
+  "assert-changes": {
+    "prefix": "assert-changes",
+    "body": [
+      "assert_changes '${1:Model}.${2:attribute}'${3:, message: '${4:msg}'}, from: ${5:'old_value'}, to: ${6:'new_value'} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Test that the result of evaluating an expression is changed after invoking the passed in block"
   },
-  "assert-redirected-to-path": {
-    "prefix": "assert-redirected-to-path",
-    "body": "assert_redirected_to ${1:model}_path",
-    "description": "assert_redirected_to (path)"
+  "assert-no-changes": {
+    "prefix": "assert-no-changes",
+    "body": [
+      "assert_no_changes '${1:Model}.${2:attribute}'${3:, message: '${4:msg}' do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Test the result of evaluating an expression is not changed after invoking the passed in block"
   },
-  "assert-redirected-to-nested-path": {
-    "prefix": "assert-redirected-to-nested-path",
-    "body": "assert_redirected_to ${1:${2:parent}_${3:child}_path(${4:${2}}, ${5:${3}})}",
-    "description": "assert_redirected_to (nested path)"
+  "assert-nothing-raised": {
+    "prefix": "assert-nothing-raised",
+    "body": [
+      "assert_nothing_raised do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Ensures that the given block doesn't raise any exceptions"
+  },
+  "assert-recognizes": {
+    "prefix": "assert-recognizes",
+    "body": "assert_recognizes(${1:expected_options}, ${2:path}, ${3:{${4:extras}\\}${5:, message: '${6:msg}'}})",
+    "description": "Asserts that the routing of the given path was handled correctly and that the parsed options (given in the expected_options hash) match path. Basically, it asserts that Rails recognizes the route given by expected_options"
+  },
+  "assert-generates": {
+    "prefix": "assert-generates",
+    "body": "assert_generates(${1:expected_path}, ${2:options}${3:, {${4:defaults}\\}, {${5:extras}\\}${6:, message: '${7:msg}'}})",
+    "description": "Asserts that the provided options can be used to generate the provided path. This is the inverse of assert_recognizes. The extras parameter is used to tell the request the names and values of additional request parameters that would be in a query string. The message parameter allows you to specify a custom error message for assertion failures"
   },
   "assert_response": {
     "prefix": "assert-response",
-    "body": "assert_response :${1:type}",
-    "description": "assert_response(type, message = nil)"
+    "body": "assert_response :${1:type}${2:, message: '${3:msg}'}",
+    "description": "Asserts that the response comes with a specific status code. You can specify :success to indicate 200-299, :redirect to indicate 300-399, :missing to indicate 404, or :error to match the 500-599 range. You can also pass an explicit status number or its symbolic equivalent. For more information, see full list of status codes and how their mapping works."
   },
+  "assert-redirected-to": {
+    "prefix": "assert-redirected-to",
+    "body": "assert_redirected_to ${1:{options\\}}${2:, message: '${3:msg}'}",
+    "description": "Asserts that the response is a redirect to a URL matching the given options. You can also pass named routes such as assert_redirected_to root_path and Active Record objects such as assert_redirected_to @article"
+  },
+
   ":sucess": {
     "prefix": ":success",
     "body": ":success",
@@ -80,5 +240,20 @@
     "prefix": ":error",
     "body": ":error",
     "description": "Asserts response status code was 500-599 range"
+  },
+
+  "assert-select": {
+    "prefix": "assert-select",
+    "body": "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}}",
+    "description": "assert_select"
+  },
+  "assert-select-block": {
+    "prefix": "assert-select-block",
+    "body": [
+      "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "assert_select with block"
   }
 }

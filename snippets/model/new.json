@@ -6,22 +6,31 @@
   },
   "email-downcase": {
     "prefix": "email-downcase",
-    "body": "before_save {self.email = email.downcase}",
+    "body": "before_save { self.email = email.downcase }",
     "description": "before_save {self.email = email.downcase}"
   },
   "active-record-model": {
     "prefix": "active-record-model",
-    "body": "class ${1:User} < ActiveRecord::Base\n\n\t$2\n\n\tprivate\n\t\t$3\nend\n",
+    "body": [
+      "class ${1:User} < ActiveRecord::Base",
+      "\t$2",
+      "",
+      "\tprivate",
+      "",
+      "\t\t$3",
+      "end",
+      ""
+    ],
     "description": "Rails Active Record Model"
   },
   "binding": {
     "prefix": "binding",
-    "body": "\nbinding.pry\n",
-    "description": ""
+    "body": "binding.pry",
+    "description": "Insert pry debug breakpoint"
   },
   "verify": {
     "prefix": "verify",
-    "body": "verify only: [:$1], method: :post, render: { status: 500, text: \"use HTTP-POST\" }\n",
+    "body": "verify only: [:$1], method: :post, render: { status: 500, text: 'use HTTP-POST' }",
     "description": "verify — render"
   },
   "accepts-nested-attributes-for": {

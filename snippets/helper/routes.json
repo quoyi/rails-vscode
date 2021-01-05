@@ -1,27 +1,43 @@
 {
   "resources": {
     "prefix": "resources",
-    "body": "resources :${1:res_name}",
+    "body": "resources :${1:sources}",
     "description": "resources :resource_name"
   },
   "resources_only": {
     "prefix": "resources-only",
-    "body": "resources :${1:res_name}, only: [:${2:index}]",
+    "body": "resources :${1:sources}, only: [:${2:index}]",
     "description": "resources :name, only: [:actions]"
   },
   "resources_do": {
     "prefix": "resources-do",
-    "body": "resources :${1:res_name} do\n  $2\nend",
+    "body": [
+      "resources :${1:sources} do",
+      "\t$0",
+      "end"
+    ],
     "description": "resources with an empty params block"
   },
   "resources_do_collection": {
     "prefix": "resources-do-collection",
-    "body": "resources :${1:res_name} do\n  collection do\n    ${2:get} :${3:action}\n  end\nend",
+    "body": [
+      "resources :${1:sources} do",
+      "\tcollection do",
+      "\t\t${2:get} :${3:action}",
+      "\tend",
+      "end"
+    ],
     "description": "resources with a custom collection block"
   },
   "resources_do_member": {
     "prefix": "resources-do-member",
-    "body": "resources :${1:res_name} do\n  member do\n    ${2:get} :${3:action}\n  end\nend",
+    "body": [
+      "resources :${1:sources} do",
+      "\tmember do",
+      "\t\t${2:get} :${3:action}",
+      "\tend",
+      "end"
+    ],
     "description": "resources with a custom member block"
   }
 }

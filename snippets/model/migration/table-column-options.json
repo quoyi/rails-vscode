@@ -1,47 +1,47 @@
 {
   "id": {
     "prefix": ":id",
-    "body": ":id => ${false}",
+    "body": "id: ${false}",
     "description": "Disable automatically add primary key (forgein key)"
   },
   "limit": {
     "prefix": ":limit",
-    "body": ":limit => ${1:size} #By default SQL String limit 255 character \n#Ex:- :limit => 40",
+    "body": "limit: ${1:size} # By default SQL String limit 255 character",
     "description": "SQL character limit size"
   },
   "default": {
     "prefix": ":default",
-    "body": ":default => ${1: value}\n#Ex:- :default =>''",
+    "body": "default: '${1:value}'",
     "description": "Default Value"
   },
   "null": {
     "prefix": ":null",
-    "body": ":null => ${1: true/false}\n#Ex:- :null => false",
+    "body": "null: ${1:true/false}",
     "description": "Null vale true or false"
   },
   "precision": {
     "prefix": ":precision",
-    "body": ":precision => ${1: number}",
+    "body": "precision: ${1:number}",
     "description": "Precision"
   },
   "scale": {
     "prefix": ":scale",
-    "body": ":scale => ${1: number}",
+    "body": "scale: ${1:number}",
     "description": "Scale"
   },
   "unique": {
     "prefix": ":unique",
-    "body": ":unique => ${1: true or false}",
-    "description": ":unique => true/false"
+    "body": "unique: ${1:true/false}",
+    "description": "unique: true/false"
   },
   "name": {
     "prefix": ":name",
-    "body": ":name => ${1: your_custom_name}",
-    "description": ":name => \"your_custom_name\""
+    "body": "name: '${1:custom_name}'",
+    "description": "name: 'custom_name'"
   },
   "after": {
     "prefix": ":after",
-    "body": ":after => ${1: column_name}",
+    "body": "after: '${1:column_name}'",
     "description": "Add column after particular table"
   }
 }

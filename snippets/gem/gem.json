@@ -1,22 +1,43 @@
 {
   "gem-development": {
     "prefix": "gem-development",
-    "body": "group :${4:development},${2: do}\n\tgem '${1:name}' 'version'\n\t$3\nend\n",
+    "body": [
+      "group :development do",
+      "\tgem '${1:name}'${2:, 'version'}",
+      "end"
+    ],
     "description": "Develpment Gem"
   },
   "gem-test": {
     "prefix": "gem-test",
-    "body": "group :${4:test},${2: do}\n\tgem '${1:name}' 'version'\n\t$3\nend\n",
+    "body": [
+      "group :test do",
+      "\tgem '${1:name}''${2:, 'version'}",
+      "end"
+    ],
     "description": "Test Gem"
   },
   "gem-production": {
     "prefix": "gem-production",
-    "body": "group :${4:production},${2: do}\n\tgem '${1:name}' 'version'\n\t$3\nend\n",
+    "body": [
+      "group :production do",
+      "\tgem '${1:name}''${2:, 'version'}",
+      "end"
+    ],
     "description": "Production Gem"
   },
   "gem-development-test": {
     "prefix": "gem-development-test",
-    "body": "group :${4::development},${2: test do}\n\tgem '${1:name}' 'version'\n\t$3\nend\n",
+    "body": [
+      "group :development, :test do",
+      "\tgem '${1:name}''${2:, 'version'}",
+      "end"
+    ],
     "description": "Develpment & Test Gem"
+  },
+  "gem": {
+    "prefix": "gem",
+    "body": "gem '${1:name}'${2, 'version'}",
+    "description": "Add gem"
   }
 }

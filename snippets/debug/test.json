@@ -8,5 +8,60 @@
     "prefix": "def-test-should-post",
     "body": "def test_should_post_${1:action}\n\t${3:@$2 = ${4:$2s}(:${5:fixture_name})\n\t}post :${1}${6:, id: @$2.to_param}, ${2:model}: { $0 }\n\tassert_response :redirect\n\nend",
     "description": "def test_should_post_action"
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "test '${1:should}' do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "setup": {
+    "prefix": "setup",
+    "body": [
+      "setup do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "controller-test": {
+    "prefix": "controller-test",
+    "body": [
+      "require 'test_helper'",
+      "",
+      "class ${1:Model}ControllerTest < ActionController::TestCase",
+      "\t# test 'truth' do",
+      "\t#\tassert true",
+      "\t#end",
+      "end"
+    ],
+    "description": "Create functional test class"
+  },
+  "job-test": {
+    "prefix": "job-test",
+    "body": [
+      "require 'test_helper'",
+      "",
+      "class ${1:Model}JobTest < ActiveJob::TestCase",
+      "\t# test 'truth' do",
+      "\t#\tassert true",
+      "\t#end",
+      "end"
+    ],
+    "description": "Create job test class"
+  },
+  "model-test": {
+    "prefix": "model-test",
+    "body": [
+      "require 'test_helper'",
+      "",
+      "class ${1:Model}Test < ActiveSupport::TestCase",
+      "\t# test 'truth' do",
+      "\t#\tassert true",
+      "\t#end",
+      "end"
+    ],
+    "description": "Create model test class"
   }
 }

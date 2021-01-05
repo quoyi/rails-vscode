@@ -14,6 +14,14 @@
     "body": "before_save :${1:method}",
     "description": "before_save"
   },
+  "before-do": {
+    "prefix": "before-do",
+    "body": [
+      "before_${1:save}${2:, on: :${3:create}} do",
+      "\t$0",
+      "end"
+    ]
+  },
   "before-validation": {
     "prefix": "before-validation",
     "body": "before_validation :${1:method}",
@@ -31,12 +39,12 @@
   },
   "before-validation-on-create": {
     "prefix": "before-validation-on-create",
-    "body": "before_validation ${1:validation_method}, on: :create",
+    "body": "before_validation ${1:method}, on: :create",
     "description": "before_validation on create"
   },
   "before-validation-on-update": {
     "prefix": "before-validation-on-update",
-    "body": "before_validation ${1:validation_method}, on: :update",
+    "body": "before_validation ${1:method}, on: :update",
     "description": "before_validation on update"
   }
 }

@@ -1,43 +1,74 @@
 {
   "for-loop": {
     "prefix": "for-loop",
-    "body": "<% if !${1:list}.blank? %>\n  <% for ${2:item} in ${1} %>\n    $3\n  <% end %>\n<% else %>\n",
+    "body": [
+      "<% if ${1:list}.present? %>",
+      "\t<% for ${2:item} in ${1} %>",
+      "\t\t$3",
+      "\t<% end %>",
+      "<% else %>",
+      "\t$4",
+      "<% end %>"
+    ],
     "description": "ERB For loop"
   },
   "each": {
     "prefix": "each",
-    "body": "\n<% ${1:@plural}.each do |${2:single}| %>\n\t$0\n<% end %>\n",
-    "description": "ERB each"
+    "body": [
+      "<% ${1:items}.each do |${2:item}| %>",
+      "\t$0",
+      "<% end %>"
+    ],
+    "description": "each do"
   },
   "if": {
     "prefix": "if",
-    "body": "\n<% if ${1:condition} %>\n\t$2\n<% end %>\n",
-    "description": "ERB if"
+    "body": [
+      "<% if ${1:true} %>",
+      "\t$0",
+      "<% end %>"
+    ],
+    "description": "if ... end"
   },
-  "if-else": {
-    "prefix": "if-else",
-    "body": "\n<% if ${1:condition} %>\n\t$2\n\t<% else %>\n\t$3\n<% end %>\n",
-    "description": "ERB if else"
-  },
-  "if-unless-inline": {
-    "prefix": "if-unless-inline",
-    "body": "<%= ${1:do_something} ${2:type_if_or_unless} ${3:condition} %>",
-    "description": "ERB if unless inline"
+  "unless": {
+    "prefix": "unless",
+    "body": [
+      "<% unless ${1:false} %>",
+      "\t$0",
+      "<% end %>"
+    ],
+    "description": "unless ... end"
   },
   "else": {
     "prefix": "else",
     "body": "<% else %>",
-    "description": "ERB else"
+    "description": "else"
   },
-  "else-if": {
+  "elsif": {
     "prefix": "else-if",
     "body": "<% elsif ${1:true} %>",
-    "description": "ERB elsif"
+    "description": "elsif"
+  },
+  "if-else": {
+    "prefix": "if-else",
+    "body": [
+      "<% if ${1:true} %>",
+      "\t$2",
+      "<% else %>",
+      "\t$3",
+      "<% end %>"
+    ],
+    "description": "if ... else ... end"
+  },
+  "if-unless-inline": {
+    "prefix": "if-unless-inline",
+    "body": "<%= ${1:code} ${2:if_or_unless} ${3:condition} %>",
+    "description": "if or unless inline"
   },
   "end": {
     "prefix": "end",
     "body": "<% end %>",
-    "description": "ERB end"
+    "description": "end"
   },
   "emded": {
     "prefix": "emded",
@@ -56,7 +87,7 @@
   },
   "flash": {
     "prefix": "flash",
-    "body": "flash[:${1:notice}] = \"${2:Successfully created...}\"$0",
+    "body": "flash[:${1:notice}] = '${2:message}'$0",
     "description": "flash[…]"
   },
   "format": {
@@ -75,17 +106,17 @@
     "description": "$LABEL"
   },
   "bye-bug": {
-    "prefix": "bye-bug",
-    "body": "\nbyebug\n",
+    "prefix": "bb",
+    "body": "<%= byebug %>",
     "description": "buy bug"
   },
   "buy-bug-erb": {
-    "prefix": "buy-bug-erb",
+    "prefix": "db",
     "body": "<%= debug(params) if Rails.env.development? %>",
-    "description": "$LABEL"
+    "description": "byebug"
   },
-  "pry": {
-    "prefix": "pry",
+  "binding.pry": {
+    "prefix": "bp",
     "body": "<%= binding.pry %>",
     "description": "binding.pry"
   },
@@ -98,5 +129,5 @@
     "prefix": "image_pack_tag",
     "body": "<%= image_pack_tag src:$1, alt: '$2' %>",
     "description": "image_pack_tag"
-  }
+	}
 }

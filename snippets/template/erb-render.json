@@ -11,48 +11,48 @@
   },
   "render-action": {
     "prefix": "render-action",
-    "body": "render action: \"${1:action}\"",
+    "body": "<%= render action: '${1:action}' %>",
     "description": "render (action)"
   },
   "render-action-layout": {
     "prefix": "render-action-layout",
-    "body": "render action: \"${1:action}\", layout: \"${2:layoutname}\"",
+    "body": "<%= render action: '${1:action}', layout: '${2:layoutname}' %>",
     "description": "render (action, layout)"
   },
   "render-file": {
     "prefix": "render-file",
-    "body": "render file: \"${1:filepath}\"",
+    "body": "<%= render file: '${1:filepath}' %>",
     "description": "render (file)"
   },
   "render-file-path": {
     "prefix": "render-file-path",
-    "body": "render file: \"${1:filepath}\", use_full_path: ${2:false}",
+    "body": "<%= render file: '${1:filepath}', use_full_path: ${2:false} %>",
     "description": "render (file, use_full_path)"
   },
   "render-inline": {
     "prefix": "render-inline",
-    "body": "render inline: \"${1:<%= 'hello' %>}\"",
+    "body": "<%= render inline: '${1:<%= 'hello' %>}' %>",
     "description": "render (inline)"
   },
   "render-inline-local": {
     "prefix": "render-inline-local",
-    "body": "render inline: \"${1:<%= 'hello' %>}\", locals: { ${2:name}: \"${3:value}\"$4 }",
+    "body": "<%= render inline: '${1:<%= 'hello' %>}', locals: { ${2:name}: '${3:value}'$4 } %>",
     "description": "render (inline, locals)"
   },
   "render-inline-type": {
     "prefix": "render-inline-type",
-    "body": "render inline: \"${1:<%= 'hello' %>}\", type: ${2::rxml}",
+    "body": "<%= render inline: '${1:<%= 'hello' %>}', type: ${2::rxml} %>",
     "description": "render (inline, type)"
   },
   "render-layout": {
     "prefix": "render-layout",
-    "body": "render layout: \"${1:layoutname}\"",
+    "body": "<%= render layout: '${1:layoutname}' %>",
     "description": "render (layout)"
   },
   "render-layout-default": {
     "prefix": "render-layout-default",
     "body": "<%= render 'file path' %>",
-    "description": "Ex: <%= render 'layouts/default' %>"
+    "description": "render 'layouts/default'"
   },
   "render-nothing": {
     "prefix": "render-nothing",
@@ -61,52 +61,56 @@
   },
   "render-nothing-status": {
     "prefix": "render-nothing-status",
-    "body": "render nothing: ${1:true}, status: ${2:401}",
+    "body": "<%= render nothing: ${1:true}, status: ${2:401} %>",
     "description": "render (nothing, status)"
   },
   "render-partial": {
     "prefix": "render-partial",
-    "body": "render \"${1:partial/path}\"${2:, ${3:var}: @${3:var}}",
+    "body": "<%= render '${1:partial/path}'${2:, ${3:var}: @${3:var}} %>",
     "description": "render partial"
   },
   "render-partial-collection": {
     "prefix": "render-partial-collection",
-    "body": "render partial: \"${1:item}\", collection: ${2:@$1s}",
+    "body": "<%= render partial: '${1:item}', collection: ${2:@$1s} %>",
     "description": "render (partial, collection)"
   },
   "render-partial-object": {
     "prefix": "render-partial-object",
-    "body": "render partial: \"${1:item}\", object: ${2:@$1}",
+    "body": "<%= render partial: '${1:item}', object: ${2:@$1} %>",
     "description": "render (partial, object)"
   },
   "render-partial-status": {
     "prefix": "render-partial-status",
-    "body": "render partial: \"${1:item}\", status: ${2:500}",
+    "body": "<%= render partial: '${1:item}', status: ${2:500} %>",
     "description": "render (partial, status)"
   },
   "render-text": {
     "prefix": "render-text",
-    "body": "render text: \"${1:text to render...}\"",
+    "body": "<%= render text: '${1:text}' %>",
     "description": "render (text)"
   },
   "render-text-layout": {
     "prefix": "render-text-layout",
-    "body": "render text: \"${1:text to render...}\", layout: \"${2:layoutname}\"",
+    "body": "<%= render text: '${1:text}', layout: '${2:layoutname}' %>",
     "description": "render (text, layout)"
   },
   "render-text-layout-true": {
     "prefix": "render-text-layout-true",
-    "body": "render text: \"${1:text to render...}\", layout: ${2:true}",
+    "body": "<%= render text: '${1:text}', layout: ${2:true} %>",
     "description": "render (text, layout: true)"
   },
   "render-text-status": {
     "prefix": "render-text-status",
-    "body": "render text: \"${1:text to render...}\", status: ${2:401}",
+    "body": "<%= render text: '${1:text}', status: ${2:401} %>",
     "description": "render (text, status)"
   },
   "render-update": {
     "prefix": "render-update",
-    "body": "render :update do |${2:page}|\n\t$2.$0\nend",
+    "body": [
+      "<%= render :update do |${2:page}|",
+      "\t$2.$0",
+      "end %>"
+    ],
     "description": "render (update)"
   }
 }

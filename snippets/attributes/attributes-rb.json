@@ -1,4 +1,14 @@
 {
+  "data": {
+    "prefix": "data",
+    "body": "data: ${1:{ confirm: 'Are you sure?' }}",
+    "description": "method"
+  },
+  "only": {
+    "prefix": "only",
+    "body": "only: ${1:[:edit, :update, :show, :destory]}",
+    "description": "method"
+  },
   "presence": {
     "prefix": "presence",
     "body": "presence :${1:true}",
@@ -16,18 +26,13 @@
   },
   "delete": {
     "prefix": "delete",
-    "body": "${1::delete}",
+    "body": ":${1:delete}",
     "description": "delete"
   },
-  "data": {
-    "prefix": "data",
-    "body": "data: ${1:{ confirm: 'Are you sure?' }}",
-    "description": "method"
-  },
-  "only": {
-    "prefix": "only",
-    "body": "only: ${1:[:edit, :update, :show, :destory]}",
-    "description": "method"
+  "show": {
+    "prefix": "show",
+    "body": ":${1:show,}",
+    "description": "show"
   },
   "edit": {
     "prefix": "edit",
@@ -38,11 +43,6 @@
     "prefix": "update",
     "body": ":${1:update,}",
     "description": "update"
-  },
-  "show": {
-    "prefix": "show",
-    "body": ":${1:show,}",
-    "description": "show"
   },
   "destroy": {
     "prefix": "destroy",

@@ -7,46 +7,51 @@
   "boolean": {
     "prefix": ":boolean",
     "body": "boolean",
-    "description": "Binary Column Type"
+    "description": "Boolean Column Type"
   },
   "date": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
+    "prefix": ":date",
+    "body": "date",
+    "description": "Date Column Type"
   },
   "datetime": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
-  },
-  "decimal": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
-  },
-  "float": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
-  },
-  "integer": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
-  },
-  "string": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
-  },
-  "text": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
+    "prefix": ":datetime",
+    "body": "datetime",
+    "description": "DateTime Column Type"
   },
   "time": {
-    "prefix": ":boolean",
-    "body": "boolean",
-    "description": "Binary Column Type"
+    "prefix": ":time",
+    "body": "time",
+    "description": "Time Column Type"
+  },
+  "decimal": {
+    "prefix": ":decimal",
+    "body": "decimal",
+    "description": "Decimal Column Type"
+  },
+  "float": {
+    "prefix": ":float",
+    "body": "float",
+    "description": "Float Column Type"
+  },
+  "integer": {
+    "prefix": ":integer",
+    "body": "integer",
+    "description": "Integer Column Type"
+  },
+  "string": {
+    "prefix": ":string",
+    "body": "string",
+    "description": "String Column Type"
+  },
+  "text": {
+    "prefix": ":text",
+    "body": "text",
+    "description": "Text Column Type"
+  },
+  "json": {
+    "prefix": ":json",
+    "body": "json",
+    "description": "Json Column Type"
   }
 }

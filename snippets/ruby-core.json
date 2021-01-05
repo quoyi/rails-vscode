@@ -16,27 +16,63 @@
   },
   "case": {
     "prefix": "case",
-    "body": "case $1\r\nwhen $2\r\n\t$3\r\nwhen $4\r\n\t$5\r\nelse\r\n\t$6\r\nend",
+    "body": [
+      "case ${1:test}",
+      "when $2",
+      "\t$3",
+      "when $4",
+      "\t$5",
+      "else",
+      "\t$6",
+      "end"
+    ],
     "description": "Ruby case"
   },
   "def": {
     "prefix": "def",
-    "body": "def ${1:method_name}\r\n\t$2\r\nend\r\n",
+    "body": [
+      "def ${1:method_name}",
+      "\t$2",
+      "end"
+    ],
     "description": "Ruby/Rails Method"
   },
   "each": {
     "prefix": "each",
-    "body": "\r\n${1:@plural}.each do |${2:single}|\r\n\t$0\r\nend\r\n",
+    "body": [
+      "${1:@items}.each do |${2:item}|",
+      "\t$0",
+      "end"
+    ],
     "description": "Ruby each"
   },
   "if": {
     "prefix": "if",
-    "body": "if ${1:condition}\r\n\t$2\r\nend\r\n",
+    "body": [
+      "if ${1:condition}",
+      "\t$2",
+      "end"
+    ],
     "description": "Ruby if"
+  },
+  "unless": {
+    "prefix": "unless",
+    "body": [
+      "unless ${1:condition}",
+      "\t$2",
+      "end"
+    ],
+    "description": "Ruby unless"
   },
   "if-else": {
     "prefix": "if-else",
-    "body": "\r\nif ${1:condition}\r\n\t$2\r\nelse\r\n\t$3\r\nend\r\n",
+    "body": [
+      "if ${1:condition}",
+      "\t$2",
+      "else",
+      "\t$3",
+      "end"
+    ],
     "description": "Ruby ifelse"
   },
   "els-if": {
@@ -46,7 +82,7 @@
   },
   "if-unless-inline": {
     "prefix": "if-unless-inline",
-    "body": "${1:do_something} ${2:type_if_or_unless} ${3:condition}",
+    "body": "${1:do_something} ${2:if/unless} ${3:condition}",
     "description": "Ruby if unless inline"
   }
 }

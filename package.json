@@ -2,7 +2,7 @@
   "name": "rails-vscode",
   "displayName": "Ruby on Rails Snippets",
   "description": "10k+ rails snippets forked hridoy/rails-vscode",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Quoyi",
   "repository": {
     "type": "https",
@@ -81,6 +81,10 @@
       {
         "language": "ruby",
         "path": "./snippets/model/belongs.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/model/capybara.json"
       },
       {
         "language": "ruby",

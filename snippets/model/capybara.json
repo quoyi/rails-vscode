@@ -1,0 +1,871 @@
+{
+  "attach-file": {
+    "prefix": "attach-file",
+    "body": "attach_file ${1:id_or_name_or_label_text}, ${2:file_path}${3:, ${4:options}}",
+    "description": "attach-file"
+  },
+  "check": {
+    "prefix": "check",
+    "body": "check ${1:id_or_name_or_label_text}${2:, ${3:options}}",
+    "description": "check"
+  },
+  "choose": {
+    "prefix": "choose",
+    "body": "choose ${1:id_or_name_or_label_text}${2:, ${3:options}}",
+    "description": "choose"
+  },
+  "click-button": {
+    "prefix": "click-button",
+    "body": "click_button '${1:id_or_text_or_value}'${2:, ${3:options}}",
+    "description": "click-button"
+  },
+  "click-link": {
+    "prefix": "click-link",
+    "body": "click_link '${1:id_or_text_or_value}'${2:, ${3:options}}",
+    "description": "click-link"
+  },
+  "click-on": {
+    "prefix": "click-on",
+    "body": "click_on '${1:id_or_text_or_value}'${2:, ${3:options}}",
+    "description": "click-on"
+  },
+  "fill-in": {
+    "prefix": "fill-in",
+    "body": "fill_in ${1:id_or_name_or_label_text}${2:, with: '${3:value}'}",
+    "description": "fill-in"
+  },
+  "select": {
+    "prefix": "select",
+    "body": "select ${1:value}, from: '${2:id_or_name_or_label_text}'${3:, ${4:options}}",
+    "description": "select"
+  },
+  "uncheck": {
+    "prefix": "uncheck",
+    "body": "uncheck ${1:id_or_name_or_label_text}${2:, ${3:options}}",
+    "description": "uncheck"
+  },
+  "unselect": {
+    "prefix": "unselect",
+    "body": "unselect ${1:value}, from: '${2:id_or_name_or_label_text}'${3:, ${4:options}}",
+    "description": "unselect"
+  },
+
+  "inspect": {
+    "prefix": "inspect",
+    "body": "inspect",
+    "description": "inspect"
+  },
+
+  "title": {
+    "prefix": "title",
+    "body": "title",
+    "description": "title"
+  },
+
+  "assert-title": {
+    "prefix": "assert-title",
+    "body": "assert_title ${1:title}${2:, ${3:options}}",
+    "description": "assert-title"
+  },
+  "assert-no-title": {
+    "prefix": "assert-no-title",
+    "body": "assert_no_title ${1:title}${2:, ${3:options}}",
+    "description": "assert-no-title"
+  },
+  "has-title": {
+    "prefix": "has-title",
+    "body": "has_title? ${1:title}${2:, ${3:options}}",
+    "description": "has-title"
+  },
+  "has-no-title": {
+    "prefix": "has-no-title",
+    "body": "has_no_title? ${1:title}${2:, ${3:options}}",
+    "description": "has-no-title"
+  },
+
+  "allow-reload!": {
+    "prefix": "allow-reload!",
+    "body": "allow_reload! ${1:idx}",
+    "description": "allow-reload!"
+  },
+  "checked?": {
+    "prefix": "checked?",
+    "body": "checked?",
+    "description": "checked?"
+  },
+  "click": {
+    "prefix": "click",
+    "body": "click ${1:${2:modifier_keys}${3:, wait: ${4:1}${5:, ${6:offset}}}}",
+    "description": "click"
+  },
+  "disabled?": {
+    "prefix": "disabled?",
+    "body": "disabled?",
+    "description": "disabled?"
+  },
+  "double-click": {
+    "prefix": "double-click",
+    "body": "double_click ${1:${2:modifier_keys}${3:, wait: ${4:1}${5:, ${6:offset}}}}",
+    "description": "double-click"
+  },
+  "drag-to": {
+    "prefix": "drag-to",
+    "body": "drag_to ${1:node}${2:, ${3:options}}",
+    "description": "drag-to"
+  },
+  "drop": {
+    "prefix": "drop",
+    "body": "drop ${1:args}",
+    "description": "drop"
+  },
+  "flash": {
+    "prefix": "flash",
+    "body": "flash",
+    "description": "flash"
+  },
+  "hover": {
+    "prefix": "hover",
+    "body": "hover",
+    "description": "hover"
+  },
+  "initial-cache": {
+    "prefix": "initial-cache",
+    "body": "initial_cache",
+    "description": "initial-cache"
+  },
+  "initialize": {
+    "prefix": "initialize",
+    "body": "initialize ${1:session}, ${2:base}, ${3:query_scope}, ${4:query}",
+    "description": "initialize"
+  },
+  "multiple?": {
+    "prefix": "multiple?",
+    "body": "multiple?",
+    "description": "multiple?"
+  },
+  "native": {
+    "prefix": "native",
+    "body": "native",
+    "description": "native"
+  },
+  "obscured?": {
+    "prefix": "obscured?",
+    "body": "obscured?",
+    "description": "obscured?"
+  },
+  "path": {
+    "prefix": "path",
+    "body": "path",
+    "description": "path"
+  },
+  "readonly?": {
+    "prefix": "readonly?",
+    "body": "readonly?",
+    "description": "readonly?"
+  },
+  "rect": {
+    "prefix": "rect",
+    "body": "rect",
+    "description": "rect"
+  },
+  "reload": {
+    "prefix": "reload",
+    "body": "reload",
+    "description": "reload"
+  },
+  "right-click": {
+    "prefix": "right-click",
+    "body": "right_click ${1:${2:modifier_keys}${3:, wait: ${4:1}${5:, ${6:offset}}}}",
+    "description": "right-click"
+  },
+  "scroll-to": {
+    "prefix": "scroll-to",
+    "body": "scroll_to ${1:pos_or_el_or_x}${2:, ${3:y}${4:, align: ${5|top,bottom,center|}${6:, offset: ${7:offset}}}}",
+    "description": "scroll-to"
+  },
+  "select-option": {
+    "prefix": "select-option",
+    "body": "select_option ${1:wait: ${2:1}}",
+    "description": "select-option"
+  },
+  "selected?": {
+    "prefix": "selected?",
+    "body": "selected?",
+    "description": "selected?"
+  },
+  "send-keys": {
+    "prefix": "send-keys",
+    "body": "send_keys ${1:${2:keys}}",
+    "description": "send-keys"
+  },
+  "set": {
+    "prefix": "set",
+    "body": "set ${1:value}${2:, ${3:options}}",
+    "description": "set"
+  },
+  "style": {
+    "prefix": "style",
+    "body": "style ${1:styles}",
+    "description": "style"
+  },
+  "tag-name": {
+    "prefix": "tag-name",
+    "body": "tag_name",
+    "description": "tag-name"
+  },
+  "text": {
+    "prefix": "text",
+    "body": "text ${1:type}${2:, normalize_ws: ${3:false}}",
+    "description": "text"
+  },
+  "trigger": {
+    "prefix": "trigger",
+    "body": "trigger ${1:event}",
+    "description": "trigger"
+  },
+  "unselect-option": {
+    "prefix": "unselect-option",
+    "body": "unselect_option ${1:wait: ${2:1}}",
+    "description": "unselect-option"
+  },
+  "valude": {
+    "prefix": "valude",
+    "body": "valude",
+    "description": "valude"
+  },
+  "visible?": {
+    "prefix": "visible?",
+    "body": "visible?",
+    "description": "visible?"
+  },
+
+  "all": {
+    "prefix": "all",
+    "body": "all ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "description": "all"
+  },
+  "ancestor": {
+    "prefix": "ancestor",
+    "body": "ancestor ${1:args}${2:, ${3:options}}",
+    "description": "ancestor"
+  },
+  "find": {
+    "prefix": "find",
+    "body": "find ${1:args}${2:, ${3:options}}",
+    "description": "find"
+  },
+  "find-button": {
+    "prefix": "find-button",
+    "body": "find_button '${1:locator}'${2:, ${3:options}}",
+    "description": "find-button"
+  },
+  "find-by-id": {
+    "prefix": "find-by-id",
+    "body": "find_by_id '#${1:id}'${2:, ${3:options}}",
+    "description": "find-by-id"
+  },
+  "find-field": {
+    "prefix": "find-field",
+    "body": "find_field '${1:locator}'${2:, ${3:options}}",
+    "description": "find-field"
+  },
+  "find-link": {
+    "prefix": "find-link",
+    "body": "find_link '${1:locator}'${2:, ${3:options}}",
+    "description": "find-link"
+  },
+  "first": {
+    "prefix": "first",
+    "body": "first ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "description": "first"
+  },
+  "sibling": {
+    "prefix": "sibling",
+    "body": "sibling ${1:args}${2:, ${3:options}}",
+    "description": "sibling"
+  },
+
+  "assert-all-of-selectors": {
+    "prefix": "assert-all-of-selectors",
+    "body": "assert_all_of_selectors? ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "description": "assert-all-of-selectors"
+  },
+  "assert-none-of-selectors": {
+    "prefix": "assert-none-of-selectors",
+    "body": "assert_none_of_selectors? ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "description": "assert-none-of-selectors"
+  },
+  "assert-ancestor": {
+    "prefix": "assert-ancestor",
+    "body": "assert_ancestor? ${1:args}",
+    "description": "assert-ancestor"
+  },
+  "assert-no-ancestor": {
+    "prefix": "assert-no-ancestor",
+    "body": "assert_no_ancestor? ${1:args}",
+    "description": "assert-no-ancestor"
+  },
+  "assert-any-of-selectors": {
+    "prefix": "assert-any-of-selectors",
+    "body": "assert_any_of_selectors? ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "description": "assert-any-of-selectors"
+  },
+  "assert-matches-selector": {
+    "prefix": "assert-matches-selector",
+    "body": "assert_matches_selector? ${1:args}",
+    "description": "assert-matches-selector"
+  },
+  "assert-not-matches-selector": {
+    "prefix": "assert-not-matches-selector",
+    "body": "assert_not_matches_selector? ${1:args}",
+    "description": "assert-not-matches-selector"
+  },
+  "assert-matches-style": {
+    "prefix": "assert-matches-style",
+    "body": "assert_matches_style? ${1:style}${2:, ${3:options}}",
+    "description": "assert-matches-style"
+  },
+  "assert-selector": {
+    "prefix": "assert-selector",
+    "body": "assert_selector? ${1:args}",
+    "description": "assert-selector"
+  },
+  "assert-no-selector": {
+    "prefix": "assert-no-selector",
+    "body": "assert_no_selector? ${1:args}",
+    "description": "assert-no-selector"
+  },
+  "assert-sibling": {
+    "prefix": "assert-sibling",
+    "body": "assert_sibling? ${1:args}",
+    "description": "assert-sibling"
+  },
+  "assert-no-sibling": {
+    "prefix": "assert-no-sibling",
+    "body": "assert_no_sibling? ${1:args}",
+    "description": "assert-no-sibling"
+  },
+  "assert-text": {
+    "prefix": "assert-text",
+    "body": "assert_text? ${1:type_or_text}${2:, ${3:args}${4:, ${5:options}}}",
+    "description": "assert-text"
+  },
+  "assert-no-text": {
+    "prefix": "assert-no-text",
+    "body": "assert_no_text? ${1:type_or_text}${2:, ${3:args}${4:, ${5:options}}}",
+    "description": "assert-no-text"
+  },
+  "has-ancestor": {
+    "prefix": "has-ancestor",
+    "body": "has_ancestor? ${1:args}${2:, ${3:options}}",
+    "description": "has-ancestor"
+  },
+  "has-no-ancestor": {
+    "prefix": "has-no-ancestor",
+    "body": "has_no_ancestor? ${1:args}${2:, ${3:options}}",
+    "description": "has-no-ancestor"
+  },
+  "has-button": {
+    "prefix": "has-button",
+    "body": "has_button? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-button"
+  },
+  "has-no-button": {
+    "prefix": "has-no-button",
+    "body": "has_no_button? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-button"
+  },
+  "has-checked-field": {
+    "prefix": "has-checked-field",
+    "body": "has_checked_field? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-checked-field"
+  },
+  "has-no-checked-field": {
+    "prefix": "has-no-checked-field",
+    "body": "has_no_checked_field? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-checked-field"
+  },
+  "has-css": {
+    "prefix": "has-css",
+    "body": "has_css? '${1:path}'${2:, ${3:options}}",
+    "description": "has-css"
+  },
+  "has-no-css": {
+    "prefix": "has-no-css",
+    "body": "has_no_css? '${1:path}'${2:, ${3:options}}",
+    "description": "has-no-css"
+  },
+  "has-field": {
+    "prefix": "has-field",
+    "body": "has_field? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-field"
+  },
+  "has-no-field": {
+    "prefix": "has-no-field",
+    "body": "has_no_field? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-field"
+  },
+  "has-link": {
+    "prefix": "has-link",
+    "body": "has_link? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-link"
+  },
+  "has-no-link": {
+    "prefix": "has-no-link",
+    "body": "has_no_link? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-link"
+  },
+  "has-select": {
+    "prefix": "has-select",
+    "body": "has_select? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-select"
+  },
+  "has-no-select": {
+    "prefix": "has-no-select",
+    "body": "has_no_select? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-select"
+  },
+  "has-selector": {
+    "prefix": "has-selector",
+    "body": "has_selector? ${1:args}${2:, ${3:options}}",
+    "description": "has-selector"
+  },
+  "has-no-selector": {
+    "prefix": "has-no-selector",
+    "body": "has_no_selector? ${1:args}${2:, ${3:options}}",
+    "description": "has-no-selector"
+  },
+  "has-sibling": {
+    "prefix": "has-sibling",
+    "body": "has_sibling? ${1:args}${2:, ${3:options}}",
+    "description": "has-sibling"
+  },
+  "has-no-sibling": {
+    "prefix": "has-no-sibling",
+    "body": "has_no_sibling? ${1:args}${2:, ${3:options}}",
+    "description": "has-no-sibling"
+  },
+  "has-table": {
+    "prefix": "has-table",
+    "body": "has_table? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-table"
+  },
+  "has-no-table": {
+    "prefix": "has-no-table",
+    "body": "has_no_table? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-table"
+  },
+  "has-text": {
+    "prefix": "has-text",
+    "body": "has_text? ${1:args}${2:, ${3:options}}",
+    "description": "has-text"
+  },
+  "has-no-text": {
+    "prefix": "has-no-text",
+    "body": "has_no_text? ${1:args}${2:, ${3:options}}",
+    "description": "has-no-text"
+  },
+  "has-unchecked-field": {
+    "prefix": "has-unchecked-field",
+    "body": "has_unchecked_field? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-unchecked-field"
+  },
+  "has-no-unchecked-field": {
+    "prefix": "has-no-unchecked-field",
+    "body": "has_no_unchecked_field? '${1:locator}'${2:, ${3:options}}",
+    "description": "has-no-unchecked-field"
+  },
+  "has-xpath": {
+    "prefix": "has-xpath",
+    "body": "has_xpath? '${1:path}'${2:, ${3:options}}",
+    "description": "has-xpath"
+  },
+  "has-no-xpath": {
+    "prefix": "has-no-xpath",
+    "body": "has_no_xpath? '${1:path}'${2:, ${3:options}}",
+    "description": "has-no-xpath"
+  },
+  "matches-css": {
+    "prefix": "matches-css",
+    "body": "matches_css? ${1:css}${2:, ${3:options}}",
+    "description": "matches-css"
+  },
+  "not-matches-css": {
+    "prefix": "not-matches-css",
+    "body": "not_matches_css? ${1:css}${2:, ${3:options}}",
+    "description": "not-matches-css"
+  },
+  "matches-selector": {
+    "prefix": "matches-selector",
+    "body": "matches_selector? ${1:args}${2:, ${3:options}}",
+    "description": "matches-selector"
+  },
+  "not-matches-selector": {
+    "prefix": "not-matches-selector",
+    "body": "not_matches_selector? ${1:args}${2:, ${3:options}}",
+    "description": "not-matches-selector"
+  },
+  "matches-style": {
+    "prefix": "matches-style",
+    "body": "matches_style? ${1:styles}${2:, ${3:options}}",
+    "description": "matches-style"
+  },
+  "matches-xpath": {
+    "prefix": "matches-xpath",
+    "body": "matches_xpath? ${1:xpath}${2:, ${3:options}}",
+    "description": "matches-xpath"
+  },
+  "not-matches-xpath": {
+    "prefix": "not-matches-xpath",
+    "body": "not_matches_xpath? ${1:xpath}${2:, ${3:options}}",
+    "description": "not-matches-xpath"
+  },
+
+  "accept-modal": {
+    "prefix": "accept-modal",
+    "body": "accept_modal ${1:type}${2:, ${3:options}}",
+    "description": "accept-modal"
+  },
+  "close-window": {
+    "prefix": "close-window",
+    "body": "close_window ${1:handle}",
+    "description": "close-window"
+  },
+  "current-url": {
+    "prefix": "current-url",
+    "body": "current_url",
+    "description": "current-url"
+  },
+  "current-window-handle": {
+    "prefix": "current-window-handle",
+    "body": "current_window_handle",
+    "description": "current-window-handle"
+  },
+  "dismiss-modal": {
+    "prefix": "dismiss-modal",
+    "body": "dismiss_modal ${1:type}${2:, ${3:options}}",
+    "description": "dismiss-modal"
+  },
+  "evaluate-async-script": {
+    "prefix": "evaluate-async-script",
+    "body": "evaluate_async_script ${1:script}${2:, ${3:args}}",
+    "description": "evaluate-async-script"
+  },
+  "evaluate-script": {
+    "prefix": "evaluate-script",
+    "body": "evaluate_script ${1:script, }${2:args}",
+    "description": "evaluate-script"
+  },
+  "execute-script": {
+    "prefix": "execute-script",
+    "body": "execute_script ${1:script, }${2:args}",
+    "description": "execute-script"
+  },
+  "find-css": {
+    "prefix": "find-css",
+    "body": "find_css '${1:query}'${2:, ${3:options}}",
+    "description": "find-css"
+  },
+  "find-xpath": {
+    "prefix": "find-xpath",
+    "body": "find_xpath '${1:query}'${2:, ${3:options}}",
+    "description": "find-xpath"
+  },
+  "frame-title": {
+    "prefix": "frame-title",
+    "body": "frame_title",
+    "description": "frame-title"
+  },
+  "frame-url": {
+    "prefix": "frame-url",
+    "body": "frame_url",
+    "description": "frame-url"
+  },
+  "fullscreen-window": {
+    "prefix": "fullscreen-window",
+    "body": "fullscreen_window ${1:handle}",
+    "description": "fullscreen-window"
+  },
+  "go-back": {
+    "prefix": "go-back",
+    "body": "go_back",
+    "description": "go-back"
+  },
+  "go-forward": {
+    "prefix": "go-forward",
+    "body": "go_forward",
+    "description": "go-forward"
+  },
+  "html": {
+    "prefix": "html",
+    "body": "html",
+    "description": "html"
+  },
+  "invalid-element-errors": {
+    "prefix": "invalid-element-errors",
+    "body": "invalid_element_errors",
+    "description": "invalid-element-errors"
+  },
+  "maximize-window": {
+    "prefix": "maximize-window",
+    "body": "maximize_window ${1:handle}",
+    "description": "maximize-window"
+  },
+  "needs-server?": {
+    "prefix": "needs-server?",
+    "body": "needs_server?",
+    "description": "needs-server?"
+  },
+  "no-such-window-error": {
+    "prefix": "no-such-window-error",
+    "body": "no_such_window_error",
+    "description": "no-such-window-error"
+  },
+  "open-new-window": {
+    "prefix": "open-new-window",
+    "body": "open_new_window",
+    "description": "open-new-window"
+  },
+  "refresh": {
+    "prefix": "refresh",
+    "body": "refresh",
+    "description": "refresh"
+  },
+  "reset!": {
+    "prefix": "reset!",
+    "body": "reset!",
+    "description": "reset!"
+  },
+  "resize-window-to": {
+    "prefix": "resize-window-to",
+    "body": "resize_window_to ${1:handle}, width: ${2:760}, height: ${3:480}",
+    "description": "resize-window-to"
+  },
+  "response-headers": {
+    "prefix": "response-headers",
+    "body": "response_headers",
+    "description": "response-headers"
+  },
+  "save-screenshot": {
+    "prefix": "save-screenshot",
+    "body": "save_screenshot '${1:file_path}'${2:, ${3:options}}",
+    "description": "save-screenshot"
+  },
+  "session-options": {
+    "prefix": "session-options",
+    "body": "session_options",
+    "description": "session-options"
+  },
+  "status-code": {
+    "prefix": "status-code",
+    "body": "status_code",
+    "description": "status-code"
+  },
+  "switch-to-frame": {
+    "prefix": "switch-to-frame",
+    "body": "switch_to_frame ${1:frame}",
+    "description": "switch-to-frame"
+  },
+  "switch-to-window": {
+    "prefix": "switch-to-window",
+    "body": "switch_to_window ${1:handle}",
+    "description": "switch-to-window"
+  },
+  "visit": {
+    "prefix": "visit",
+    "body": "visit ${1:route_or_path_or_url}",
+    "description": "visit"
+  },
+  "wait?": {
+    "prefix": "wait?",
+    "body": "wait?",
+    "description": "wait?"
+  },
+  "window-handles": {
+    "prefix": "window-handles",
+    "body": "window_handles",
+    "description": "window-handles"
+  },
+  "window-size": {
+    "prefix": "window-size",
+    "body": "window_size ${1:handle}",
+    "description": "window-size"
+  },
+
+  "exact": {
+    "prefix": "exact",
+    "body": "Capybara.exact = true",
+    "description": "exact"
+  },
+  "add-selector": {
+    "prefix": "add-selector",
+    "body": [
+      "Capybara.add_selector :${1:selector_name} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "add-selector"
+  },
+
+  "expired?": {
+    "prefix": "expired?",
+    "body": "expired?",
+    "description": "expired?"
+  },
+  "stalled?": {
+    "prefix": "stalled?",
+    "body": "stalled?",
+    "description": "stalled?"
+  },
+
+  "accept-alert": {
+    "prefix": "accept-alert",
+    "body": "accept_alert ${1:text}${2:, ${3:options}}",
+    "description": "accept-alert"
+  },
+  "accept-confirm": {
+    "prefix": "accept-confirm",
+    "body": "accept_confirm ${1:text}${2:, ${3:options}}",
+    "description": "accept-confirm"
+  },
+  "accept-prompt": {
+    "prefix": "accept-prompt",
+    "body": "accept_prompt ${1:text}${2:, ${3:options}}",
+    "description": "accept-prompt"
+  },
+  "config": {
+    "prefix": "config",
+    "body": "config",
+    "description": "config"
+  },
+  "configure": {
+    "prefix": "configure",
+    "body": "configure { |config| $0 }",
+    "description": "configure"
+  },
+  "current-host": {
+    "prefix": "current-host",
+    "body": "current_host",
+    "description": "current-host"
+  },
+  "current-path": {
+    "prefix": "current-path",
+    "body": "current_path",
+    "description": "current-path"
+  },
+  "current-scope": {
+    "prefix": "current-scope",
+    "body": "current_scope",
+    "description": "current-scope"
+  },
+  "current-window": {
+    "prefix": "current-window",
+    "body": "current_window",
+    "description": "current-window"
+  },
+  "dismiss-confirm": {
+    "prefix": "dismiss-confirm",
+    "body": "dismiss_confirm ${1:type}${2:, ${3:options}}",
+    "description": "dismiss-confirm"
+  },
+  "dismiss-prompt": {
+    "prefix": "dismiss-prompt",
+    "body": "dismiss_prompt ${1:type}${2:, ${3:options}}",
+    "description": "dismiss-prompt"
+  },
+  "document": {
+    "prefix": "document",
+    "body": "document",
+    "description": "document"
+  },
+  "quit": {
+    "prefix": "quit",
+    "body": "quit",
+    "description": "quit"
+  },
+  "raise-server-error!": {
+    "prefix": "raise-server-error!",
+    "body": "raise_server_error!",
+    "description": "raise-server-error!"
+  },
+  "save-and-open-page": {
+    "prefix": "save-and-open-page",
+    "body": "save_and_open_page ${1:path}",
+    "description": "save-and-open-page"
+  },
+  "save-and-open-screenshot": {
+    "prefix": "save-and-open-screenshot",
+    "body": "save_and_open_screenshot ${1:path}${2:, ${3:options}}",
+    "description": "save-and-open-screenshot"
+  },
+  "save-page": {
+    "prefix": "save-page",
+    "body": "save_page ${1:path}",
+    "description": "save-page"
+  },
+  "server-url": {
+    "prefix": "server-url",
+    "body": "server_url",
+    "description": "server-url"
+  },
+  "using-wait-time": {
+    "prefix": "using-wait-time",
+    "body": "using_wait_time ${1:seconds}",
+    "description": "using-wait-time"
+  },
+  "window-opened-by": {
+    "prefix": "window-opened-by",
+    "body": "window_opened_by ${1:options}",
+    "description": "window-opened-by"
+  },
+  "windows": {
+    "prefix": "windows",
+    "body": "windows",
+    "description": "windows"
+  },
+  "within": {
+    "prefix": "within",
+    "body": [
+      "within ${1:id_or_name_or_label_text} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "within"
+  },
+  "within-fieldset": {
+    "prefix": "within-fieldset",
+    "body": [
+      "within_fieldset ${1:id_or_name_or_label_text} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "within-fieldset"
+  },
+  "within-frame": {
+    "prefix": "within-frame",
+    "body": [
+      "within_frame ${1:id_or_name_or_label_text} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "within-frame"
+  },
+  "within-table": {
+    "prefix": "within-table",
+    "body": [
+      "within_table ${1:id_or_name_or_label_text} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "within-table"
+  },
+  "within-window": {
+    "prefix": "within-window",
+    "body": [
+      "within_window ${1:window_or_proc_or_lambda} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "within-window"
+  }
+}

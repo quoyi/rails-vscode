@@ -63,11 +63,6 @@
     "body": "subject(:${1:var}) { $2 } ",
     "description": "RSpec Subject-Let"
   },
-  "fill-in": {
-    "prefix": "fill-in",
-    "body": "fill_in '${1:Field}', with: '${2:sometext}' ",
-    "description": "RSpec Capybara fill_in with"
-  },
   "describe": {
     "prefix": "describe",
     "body": [

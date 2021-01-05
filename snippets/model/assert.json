@@ -255,5 +255,33 @@
       "end"
     ],
     "description": "assert_select with block"
+  },
+  "assert-select-email": {
+    "prefix": "assert-select-email",
+    "body": [
+      "assert_select_email do",
+      "\t$0",
+      "end"
+    ],
+    "description": "assert_select_email"
+  },
+  "assert-select-encoded": {
+    "prefix": "assert-select-encoded",
+    "body": [
+      "assert_select_encoded do",
+      "\t$0",
+      "end"
+    ],
+    "description": "assert_select_encoded"
+  },
+  "css-select": {
+    "prefix": "css-select",
+    "body": "css_select ${1:selector}",
+    "description": "css-select"
+  },
+  "css-select-in-element": {
+    "prefix": "css-select-in-element",
+    "body": "css_select ${1:element}, ${2:selector}",
+    "description": "css-select-in-element"
   }
 }

@@ -2,7 +2,7 @@
   "name": "rails-vscode",
   "displayName": "Ruby on Rails Snippets",
   "description": "10k+ rails snippets forked hridoy/rails-vscode",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "publisher": "Quoyi",
   "repository": {
     "type": "https",

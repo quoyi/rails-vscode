@@ -1,17 +1,17 @@
 {
   "attach-file": {
     "prefix": "attach-file",
-    "body": "attach_file ${1:id_or_name_or_label_text}, ${2:file_path}${3:, ${4:options}}",
+    "body": "attach_file '${1:id_or_name_or_label_text}', ${2:file_path}${3:, ${4:options}}",
     "description": "attach-file"
   },
   "check": {
     "prefix": "check",
-    "body": "check ${1:id_or_name_or_label_text}${2:, ${3:options}}",
+    "body": "check '${1:id_or_name_or_label_text}'${2:, ${3:options}}",
     "description": "check"
   },
   "choose": {
     "prefix": "choose",
-    "body": "choose ${1:id_or_name_or_label_text}${2:, ${3:options}}",
+    "body": "choose '${1:id_or_name_or_label_text}'${2:, ${3:options}}",
     "description": "choose"
   },
   "click-button": {
@@ -31,7 +31,7 @@
   },
   "fill-in": {
     "prefix": "fill-in",
-    "body": "fill_in ${1:id_or_name_or_label_text}${2:, with: '${3:value}'}",
+    "body": "fill_in '${1:id_or_name_or_label_text}'${2:, with: '${3:value}'}",
     "description": "fill-in"
   },
   "select": {
@@ -41,7 +41,7 @@
   },
   "uncheck": {
     "prefix": "uncheck",
-    "body": "uncheck ${1:id_or_name_or_label_text}${2:, ${3:options}}",
+    "body": "uncheck '${1:id_or_name_or_label_text}'${2:, ${3:options}}",
     "description": "uncheck"
   },
   "unselect": {
@@ -826,7 +826,7 @@
   "within": {
     "prefix": "within",
     "body": [
-      "within ${1:id_or_name_or_label_text} do",
+      "within '${1:id_or_name_or_label_text}' do",
       "\t$0",
       "end"
     ],
@@ -835,7 +835,7 @@
   "within-fieldset": {
     "prefix": "within-fieldset",
     "body": [
-      "within_fieldset ${1:id_or_name_or_label_text} do",
+      "within_fieldset '${1:id_or_name_or_label_text}' do",
       "\t$0",
       "end"
     ],
@@ -844,7 +844,7 @@
   "within-frame": {
     "prefix": "within-frame",
     "body": [
-      "within_frame ${1:id_or_name_or_label_text} do",
+      "within_frame '${1:id_or_name_or_label_text}' do",
       "\t$0",
       "end"
     ],
@@ -853,7 +853,7 @@
   "within-table": {
     "prefix": "within-table",
     "body": [
-      "within_table ${1:id_or_name_or_label_text} do",
+      "within_table '${1:id_or_name_or_label_text}' do",
       "\t$0",
       "end"
     ],

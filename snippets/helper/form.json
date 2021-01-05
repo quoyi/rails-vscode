@@ -4,7 +4,6 @@
     "body": [
       "<%= form_for ${1:@object}${2:, html: { multipart: true \\} } do |${3:f}| %>",
       "\t<%= render 'layouts/error_messages', f: f.object %>",
-      "",
       "\t$0",
       "<% end %>"
     ],

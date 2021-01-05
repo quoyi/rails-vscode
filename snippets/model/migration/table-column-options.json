@@ -1,7 +1,7 @@
 {
   "id": {
     "prefix": ":id",
-    "body": "id: ${false}",
+    "body": "id: :${1:false}",
     "description": "Disable automatically add primary key (forgein key)"
   },
   "limit": {

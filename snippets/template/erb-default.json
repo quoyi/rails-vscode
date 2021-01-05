@@ -92,18 +92,13 @@
   },
   "format": {
     "prefix": "format",
-    "body": "format.${1:js|xml|html}${2: { $0 \\}}",
+    "body": "format.${1|js,xml,html|}${2: { $0 \\}}",
     "description": "format.format"
   },
   "map": {
     "prefix": "map",
     "body": "map(&:${1:id})",
     "description": "map(&:sym_proc)"
-  },
-  "$label": {
-    "prefix": "$label",
-    "body": "$LABEL",
-    "description": "$LABEL"
   },
   "bye-bug": {
     "prefix": "bb",

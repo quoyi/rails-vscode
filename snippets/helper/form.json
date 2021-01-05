@@ -113,5 +113,15 @@
     "prefix": "f.submit",
     "body": "<%= f.submit '${1:Submit}'${2:, disable_with: '${3:$1ing...}'} %>",
     "description": "f.submit"
+  },
+  "f.input": {
+    "prefix": "f.input",
+    "body": "<%= f.input :${1:attribute}${2:, label: ${3|'Label',false|}${4:, as: :${5|boolean,email,url,tel,password,search,text,file,hidden,decimal,date,select,radio_buttons,check_boxes|}}${6:, wrapper: :${7:wrapper_name}}${8:, input_html: { class: '${9:form-control}' \\}}} %>",
+    "description": "f.submit"
+  },
+  "f.search": {
+    "prefix": "f.search",
+    "body": "<%= ${1:f}.input :${2:title}_${3|eq,not_eq,matches,does_not_match,matches_any,matches_all,does_not_match_any,does_not_match_all,lt,lteq,gt,gteq,present,blank,null,not_null,in,not_in,lt_any,lteq_any,gt_any,gteq_any,lt_all,lteq_all,gt_all,gteq_all,not_eq_all,start,not_start,start_any,start_all,not_start_any,not_start_all,end,not_end,end_any,end_all,not_end_any,not_end_all,cont,cont_any,cont_all,not_cont,not_cont_any,not_cont_all,i_cont,i_cont_any,i_cont_all,not_i_cont,not_i_cont_any,not_i_cont_all,true,false|}, placeholder: '${4:Query by name contains}' %>",
+    "description": "Ransack search field"
   }
 }

@@ -34,5 +34,47 @@
       "$0"
     ],
     "description": "text field with twitter bootstrap"
+  },
+  "simple-form": {
+    "prefix": "simple-form",
+    "body": [
+      "<%= simple_form_for @${1:object}${2:, url: @${1}.new_record? ? ${1}s_path : ${1}_path}${3:, method: :${4|get,post,put,patch|}}${5:, wrapper: :${6|vertical_form,horizontal_form,inline_form,floating_labels_form|}}${7:, html: { class: '${8:form-horizontal}' }} do |${9:f}| %>",
+      "\t<div class=\"form-inputs\">",
+      "\t\t$0",
+      "\t</div>",
+      "",
+      "\t<div class=\"form-actions\">",
+      "\t\t<%= ${9}.button :submit, class: 'btn btn-primary' %>",
+      "\t</div>",
+      "<% end %>"
+    ],
+    "description": "simple_form_for"
+  },
+  "simple-search-form": {
+    "prefix": "simple-search-form",
+    "body": [
+      "<%= simple_form_for @${1:q}, url: ${2:'search_path'}, method: :get${3:, wrapper: :${4|vertical_form,horizontal_form,inline_form,floating_labels_form|}}${5:, html: { class: ${6:'search-form'} \\}} do |${7:f}| %>",
+      "\t<div class=\"form-inputs\">",
+      "\t\t<%= ${7}.input :${8:title}_${9|eq,not_eq,matches,does_not_match,matches_any,matches_all,does_not_match_any,does_not_match_all,lt,lteq,gt,gteq,present,blank,null,not_null,in,not_in,lt_any,lteq_any,gt_any,gteq_any,lt_all,lteq_all,gt_all,gteq_all,not_eq_all,start,not_start,start_any,start_all,not_start_any,not_start_all,end,not_end,end_any,end_all,not_end_any,not_end_all,cont,cont_any,cont_all,not_cont,not_cont_any,not_cont_all,i_cont,i_cont_any,i_cont_all,not_i_cont,not_i_cont_any,not_i_cont_all,true,false|}, placeholder: '${10:Query by name contains}' %>",
+      "\t</div>",
+      "",
+      "\t<div class=\"form-actions\">",
+      "\t\t<%= ${7}.button :submit, class: 'btn btn-primary' %>",
+      "\t</div>",
+      "<% end %>"
+    ],
+    "description": "Search simple_form_for"
+  },
+  "search-form": {
+    "prefix": "search-form",
+    "body": [
+      "<%= search_form_for @q${1:, html: { class: '${2:search-form}' \\}} do |${3:f}| %>",
+      "\t<%= ${3}.label :${4:name}_${5|eq,not_eq,matches,does_not_match,matches_any,matches_all,does_not_match_any,does_not_match_all,lt,lteq,gt,gteq,present,blank,null,not_null,in,not_in,lt_any,lteq_any,gt_any,gteq_any,lt_all,lteq_all,gt_all,gteq_all,not_eq_all,start,not_start,start_any,start_all,not_start_any,not_start_all,end,not_end,end_any,end_all,not_end_any,not_end_all,cont,cont_any,cont_all,not_cont,not_cont_any,not_cont_all,i_cont,i_cont_any,i_cont_all,not_i_cont,not_i_cont_any,not_i_cont_all,true,false|} %>",
+      "\t<%= ${3}.search_field :${4:name}_${5} %>",
+      "",
+      "\t<%= ${3}.submit ${6:'Search'}${7:, class: 'btn btn-primary'} %>",
+      "<% end %>"
+    ],
+    "description": "search_form_for"
   }
 }

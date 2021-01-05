@@ -241,7 +241,7 @@
 
   "all": {
     "prefix": "all",
-    "body": "all ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "body": "all ${1:kind, }'${2:locator}'${3:, ${4:options}}",
     "description": "all"
   },
   "ancestor": {
@@ -276,7 +276,7 @@
   },
   "first": {
     "prefix": "first",
-    "body": "first ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "body": "first ${1:kind, }'${2:locator}'${3:, ${4:options}}",
     "description": "first"
   },
   "sibling": {
@@ -287,12 +287,12 @@
 
   "assert-all-of-selectors": {
     "prefix": "assert-all-of-selectors",
-    "body": "assert_all_of_selectors? ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "body": "assert_all_of_selectors? ${1:kind, }'${2:locator}'${3:, ${4:options}}",
     "description": "assert-all-of-selectors"
   },
   "assert-none-of-selectors": {
     "prefix": "assert-none-of-selectors",
-    "body": "assert_none_of_selectors? ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "body": "assert_none_of_selectors? ${1:kind, }'${2:locator}'${3:, ${4:options}}",
     "description": "assert-none-of-selectors"
   },
   "assert-ancestor": {
@@ -307,7 +307,7 @@
   },
   "assert-any-of-selectors": {
     "prefix": "assert-any-of-selectors",
-    "body": "assert_any_of_selectors? ${1:kind,}'${2:locator}'${3:, ${4:options}}",
+    "body": "assert_any_of_selectors? ${1:kind, }'${2:locator}'${3:, ${4:options}}",
     "description": "assert-any-of-selectors"
   },
   "assert-matches-selector": {

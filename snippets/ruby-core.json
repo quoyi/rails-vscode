@@ -82,7 +82,7 @@
   },
   "if-unless-inline": {
     "prefix": "if-unless-inline",
-    "body": "${1:do_something} ${2:if/unless} ${3:condition}",
+    "body": "${1:do_something} ${2|if,unless|} ${3:condition}",
     "description": "Ruby if unless inline"
   }
 }

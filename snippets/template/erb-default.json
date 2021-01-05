@@ -62,7 +62,7 @@
   },
   "if-unless-inline": {
     "prefix": "if-unless-inline",
-    "body": "<%= ${1:code} ${2:if_or_unless} ${3:condition} %>",
+    "body": "<%= ${1:code} ${2|if,unless|} ${3:condition} %>",
     "description": "if or unless inline"
   },
   "end": {
@@ -87,7 +87,7 @@
   },
   "flash": {
     "prefix": "flash",
-    "body": "flash[:${1:notice}] = '${2:message}'$0",
+    "body": "flash[:${1|notice,success,error|}] = '${2:message}'",
     "description": "flash[…]"
   },
   "format": {

@@ -117,12 +117,12 @@
   },
   "image_tag": {
     "prefix": "image_tag",
-    "body": "<%= image_tag src:$1, alt: '$2' %>",
+    "body": "<%= image_tag ${1:src}, alt: '${1}' %>",
     "description": "image_tag"
   },
   "image_pack_tag": {
     "prefix": "image_pack_tag",
-    "body": "<%= image_pack_tag src:$1, alt: '$2' %>",
+    "body": "<%= image_pack_tag ${1:src}, alt: '${1}' %>",
     "description": "image_pack_tag"
 	}
 }

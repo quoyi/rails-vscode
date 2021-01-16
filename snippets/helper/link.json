@@ -1,7 +1,16 @@
 {
   "link_to": {
     "prefix": "link-to",
-    "body": "<%= link_to '${1:text}', ${2:path} %>",
+    "body": "<%= link_to '${1:text}', ${2:path}${3:, class: '${4:link}'} %>",
+    "description": "ERB link_to"
+  },
+  "link_to_do": {
+    "prefix": "link-to",
+    "body": [
+      "<%= link_to ${1:path}${2:, class: '${3:link}'} do %>",
+      "\t$3",
+      "<% end %>"
+    ],
     "description": "ERB link_to"
   },
   "link_to_action": {

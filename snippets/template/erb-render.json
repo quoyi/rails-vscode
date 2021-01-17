@@ -1,4 +1,9 @@
 {
+  "yield": {
+    "prefix": "yield",
+    "body": "<%= yield ${1::${2:content_for_block}} %>",
+    "description": "ERB Yield Tag"
+  },
   "render": {
     "prefix": "render",
     "body": "<%= render '${1:f}' %>",

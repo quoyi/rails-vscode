@@ -4,6 +4,35 @@
     "body": "<%= yield ${1::${2:content_for_block}} %>",
     "description": "ERB Yield Tag"
   },
+  "content-for": {
+    "prefix": "content-for",
+    "body": [
+      "<%= content_for :${1:name}${2:, '${3:content}'}${4:, ${5:hash_opts}} do %>",
+      "\t$6",
+      "<% end %>"
+    ],
+    "description": "ERB content-for Tag"
+  },
+  "content-for-check": {
+    "prefix": "content-for-check",
+    "body": "content_for?(:${1:content_for_block})",
+    "description": "content-for-check"
+  },
+  "yield-if": {
+    "prefix": "yield-if",
+    "body": "<%= yield :${1:content_for_block} if ${2:condition}  %>",
+    "description": "yield-if"
+  },
+  "yield-unless": {
+    "prefix": "yield-unless",
+    "body": "<%= yield :${1:content_for_block} unless ${2:condition}  %>",
+    "description": "yield-unless"
+  },
+  "yield-content-for": {
+    "prefix": "yield-content-for",
+    "body": "<%= yield :${1:content_for_block} if content_for?(:${1})  %>",
+    "description": "yield-content-for"
+  },
   "render": {
     "prefix": "render",
     "body": "<%= render '${1:f}' %>",

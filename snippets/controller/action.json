@@ -1,0 +1,52 @@
+{
+  "prepend-after-action": {
+    "prefix": "prepend-after-action",
+    "body": "prepend_after_action :${1:methods}",
+    "description": "prepend-after-action"
+  },
+  "prepend-around-action": {
+    "prefix": "prepend-around-action",
+    "body": "prepend_around_action :${1:methods}",
+    "description": "prepend-around-action"
+  },
+  "prepend-before-action": {
+    "prefix": "prepend-before-action",
+    "body": "prepend_before_action :${1:methods}",
+    "description": "prepend-before-action"
+  },
+  "after-action": {
+    "prefix": "after-action",
+    "body": "after_action :${1:methods}",
+    "description": "after-action"
+  },
+  "around-action": {
+    "prefix": "around-action",
+    "body": "around_action :${1:methods}",
+    "description": "around-action"
+  },
+  "before-action": {
+    "prefix": "before-action",
+    "body": "before_action :${1:methods}",
+    "description": "before-action"
+  },
+  "skip-before-action": {
+    "prefix": "skip-before-action",
+    "body": "skip_before_action :${1:methods}",
+    "description": "skip-before-action"
+  },
+  "append-after-action": {
+    "prefix": "append-after-action",
+    "body": "append_after_action :${1:methods}",
+    "description": "append-after-action"
+  },
+  "append-around-action": {
+    "prefix": "append-around-action",
+    "body": "append_around_action :${1:methods}",
+    "description": "append-around-action"
+  },
+  "append-before-action": {
+    "prefix": "append-before-action",
+    "body": "append_before_action :${1:methods}",
+    "description": "append-before-action"
+  }
+}

@@ -1,13 +1,23 @@
 {
-  "before-action": {
-    "prefix": "before-action",
-    "body": "before_action :${1:method}",
-    "description": "before_action"
+  "before-validation": {
+    "prefix": "before-validation",
+    "body": "before_validation :${1:method}",
+    "description": "before_validation"
   },
   "before-create": {
     "prefix": "before-create",
     "body": "before_create :${1:method}",
     "description": "before_create"
+  },
+  "before-update": {
+    "prefix": "before-update",
+    "body": "before_update ",
+    "description": "before_update"
+  },
+  "before-destroy": {
+    "prefix": "before-destroy",
+    "body": "before_destroy ",
+    "description": "before_destroy"
   },
   "before-save": {
     "prefix": "before-save",
@@ -17,25 +27,11 @@
   "before-do": {
     "prefix": "before-do",
     "body": [
-      "before_${1:save}${2:, on: :${3:create}} do",
+      "before_${1|validation,create,update,destroy,save|}${2:, on: :${3:create}} do",
       "\t$0",
       "end"
-    ]
-  },
-  "before-validation": {
-    "prefix": "before-validation",
-    "body": "before_validation :${1:method}",
-    "description": "before_validation"
-  },
-  "before-destroy": {
-    "prefix": "before-destroy",
-    "body": "before_destroy ",
-    "description": "before_destroy"
-  },
-  "before-update": {
-    "prefix": "before-update",
-    "body": "before_update ",
-    "description": "before_update"
+    ],
+    "description": "before-do with block"
   },
   "before-validation-on-create": {
     "prefix": "before-validation-on-create",

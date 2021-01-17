@@ -1,0 +1,31 @@
+{
+  "around-create": {
+    "prefix": "around-create",
+    "body": "around_create :${1:method}",
+    "description": "around_create"
+  },
+  "around-update": {
+    "prefix": "around-update",
+    "body": "around_update ",
+    "description": "around_update"
+  },
+  "around-destroy": {
+    "prefix": "around-destroy",
+    "body": "around_destroy ",
+    "description": "around_destroy"
+  },
+  "around-save": {
+    "prefix": "around-save",
+    "body": "around_save :${1:method}",
+    "description": "around_save"
+  },
+  "around-do": {
+    "prefix": "around-do",
+    "body": [
+      "around_${1|create,update,destroy,save|}${2:, on: :${3:create}} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "around-do with block"
+  }
+}

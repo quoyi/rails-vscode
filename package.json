@@ -32,6 +32,10 @@
       },
       {
         "language": "ruby",
+        "path": "./snippets/controller/action.json"
+      },
+      {
+        "language": "ruby",
         "path": "./snippets/controller/controller.json"
       },
       {
@@ -69,6 +73,10 @@
       {
         "language": "ruby",
         "path": "./snippets/model/after.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/model/around.json"
       },
       {
         "language": "ruby",

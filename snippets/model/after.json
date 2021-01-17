@@ -1,13 +1,23 @@
 {
+  "after-validation": {
+    "prefix": "after-validation",
+    "body": "after_validation :${1:method}",
+    "description": "after_validation callback"
+  },
+  "after-find": {
+    "prefix": "after-find",
+    "body": "after_find :${1:method}",
+    "description": "after_find callback"
+  },
+  "after-touch": {
+    "prefix": "after-touch",
+    "body": "after_touch :${1:method}",
+    "description": "after_touch callback"
+  },
   "after-create": {
     "prefix": "after-create",
     "body": "after_create :${1:method}",
     "description": "after_create"
-  },
-  "after-save": {
-    "prefix": "after-save",
-    "body": "after_save :${1:method}",
-    "description": "after_save"
   },
   "after-update": {
     "prefix": "after-update",
@@ -19,10 +29,29 @@
     "body": "after_destroy ",
     "description": "after_destroy"
   },
-  "after-validation": {
-    "prefix": "after-validation",
-    "body": "after_validation :${1:method}",
-    "description": "after_validation callback"
+  "after-save": {
+    "prefix": "after-save",
+    "body": "after_save :${1:method}",
+    "description": "after_save"
+  },
+  "after-commit": {
+    "prefix": "after-commit",
+    "body": "after_commit :${1:method}",
+    "description": "after_commit"
+  },
+  "after-rollback": {
+    "prefix": "after-rollback",
+    "body": "after_rollback :${1:method}",
+    "description": "after_rollback"
+  },
+  "after-do": {
+    "prefix": "after-do",
+    "body": [
+      "after_${1|validation,find,touch,create,update,destroy,save,commit,rollback|}${2:, on: :${3|create,update,destroy|}} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "after-do with block"
   },
   "after-validation-on-create": {
     "prefix": "after-validation-on-create",

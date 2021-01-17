@@ -1,32 +1,26 @@
 # Rails Snippets
-**Now updated for latest rails version**
+
+**Suggestions, Issues or PR, any contribution are welcomed!**
 
 This extension for Visual Studio Code adds snippets for Ruby on rails. More
 Snippets will be becoming soon.
-## Upcoming:
-- Handle Bar Template
-- HAML Template
-- Custom Error Solution
-- Angular Rails
-- Reactjs Rails
-- Ember Rails
-- Jasmin Rails
-- Mocha Rails
-- Chai Rails
 
 ![Use Extension](https://github.com/hridoy/media/raw/master/rails-preview.gif)
 
 See the [CHANGELOG](https://github.com/hridoy/rails-vscode/master/CHANGELOG.md)
 for the latest changes
 
-# Usage
+## Usage
+
 Type the helper name and replace **"_"** with **"-"**
 
-For Example: 
-  - has-many
-  - def-create
-  - def-show
-# Controller
+For Example:
+
+- has-many
+- def-create
+- def-show
+
+## Controller
 
  For example:
 
@@ -37,9 +31,16 @@ For Example:
 | `find-id`     | find(id)            |
 | `find-params` | find(params[:id])   |
 
-# Model
+## Model
 
-## after
+    * cattr-accessor
+    * mattr-accessor
+    * after-validation
+    * after-find
+    * after-touch
+
+### after
+
     *  after-create
     *  after-save
     *  after-update
@@ -48,7 +49,8 @@ For Example:
     *  after-validation-on-create
     *  after-validation-on-Update
 
-## before
+### before
+
     *  before-action
     *  before-create
     *  before-save
@@ -57,16 +59,6 @@ For Example:
     *  before-update
     *  before-validation-on-create
     *  before-validation-on-update
-
-## has
-    *  has-many
-    *  has-many-through
-    *  has-many-dependent
-    *  has-one
-    *  has-one-through
-    *  has-and-belongs-to-many
-
-## before
     *  validate
     *  validates
     *  validates-acceptance-of
@@ -91,9 +83,17 @@ For Example:
     *  validated-presence-of-if
     *  validated-uniqueness-of
     *  validated-uniqueness-of-if
+
+### has
+
+    *  has-many
+    *  has-many-through
+    *  has-many-dependent
+    *  has-one
+    *  has-one-through
+    *  has-and-belongs-to-many
+
 ## Migration
-
-
 
 | Type             | Output        |
 | ---------------- | ------------- |
@@ -123,32 +123,33 @@ For Example:
 | `create-table`   | Create Table  |
 | `drop-table`     | Drop Table    |
 
-# ERB Template
-*  for-loop 
-*  each
-*  if
-*  if-else 
-*  if-unless-inline 
-*  else
-*  else-if 
-*  end  
-*  emded (%< %>)
-*  emded-print (<%= %>)
-*  collection-select 
-*  stylesheet-link-tag 
-*  submit-tag 
-*  flash 
-*  fixture 
-*  form_tag 
-*  format    
-*  image_submit_tag
-*  map
-*  $label 
-*  bye-bug    
-*  buy-bug-erb
+## ERB Template
 
+    * for-loop
+    * each
+    * if
+    * if-else
+    * if-unless-inline
+    * else
+    * else-if
+    * end
+    * emded (%< %>)
+    * emded-print (<%= %>)
+    * collection-select
+    * stylesheet-link-tag
+    * submit-tag
+    * flash
+    * fixture
+    * form_tag
+    * format
+    * image_submit_tag
+    * map
+    * $label
+    * bye-bug
+    * buy-bug-erb
 
 ## render
+
     *  render
     *  render-action
     *  render-action-layout
@@ -171,26 +172,28 @@ For Example:
     *  render-text-status
     *  render-update
 
-# Gem
-* gem-development
-* gem-test
-* gem-production
-* gem-development-test
+## Gem
 
-# Attributes
-* presense
-* length
-* method
-* delete
-* data
-* only
-* edit
-* update
-* show
-* destroy
-* format
+    * gem-development
+    * gem-test
+    * gem-production
+    * gem-development-test
 
-# Use the Snippets
+## Attributes
+
+    * presense
+    * length
+    * method
+    * delete
+    * data
+    * only
+    * edit
+    * update
+    * show
+    * destroy
+    * format
+
+## Use the Snippets
 
 Start typing the name of the helper you want (ex: "emb" for "embed") and hit Tab to insert the snippet.
 

@@ -85,6 +85,11 @@
     "body": "remove_index :${1:table_name}, name: :${2:index_name}",
     "description": "Remove Index"
   },
+  "t.index": {
+    "prefix": "t.index",
+    "body": "t.index [:${1:field}]${2:, unique: true}${3:, name: '${4:index_of_table}'}",
+    "description": "Create Index in Table"
+  },
   "t.column": {
     "prefix": "t.column",
     "body": "t.column ${1:column_name}, :${2:column_type}",

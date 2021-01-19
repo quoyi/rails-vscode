@@ -16,7 +16,7 @@
   },
   "has-many-attached": {
     "prefix": "has-many-attached",
-    "body": "has_many_attached :${1:objects}${2:, service: :${3|local,s3,GCS,AzureStorage,aliyun|}}${4:, strict_loading: true}",
+    "body": "has_many_attached :${1:objects}${2:${3:, dependent: :purge_later}${4:, service: :${5|local,s3,GCS,AzureStorage,aliyun|}}${6:, strict_loading: true}}",
     "description": "has-many-attached"
   },
   "has-one": {
@@ -36,7 +36,7 @@
   },
   "has-one-attached": {
     "prefix": "has-one-attached",
-    "body": "has_one_attached :${1:object}${2:, service: :${3|local,s3,GCS,AzureStorage,aliyun|}}${4:, strict_loading: true}",
+    "body": "has_one_attached :${1:object}${2:${3:, dependent: :purge_later}${4:, service: :${5|local,s3,GCS,AzureStorage,aliyun|}}${6:, strict_loading: true}}",
     "description": "has-one-attached"
   }
 }

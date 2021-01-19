@@ -62,7 +62,7 @@
   },
   "remove-column": {
     "prefix": "remove-column",
-    "body": "remove_column :${1:table_name}, :${2:column_name}",
+    "body": "remove_column :${1:table_name}, :${2:column_name}, if_exists: true",
     "description": "Remove Column"
   },
   "change-column": {
@@ -77,12 +77,12 @@
   },
   "add-index": {
     "prefix": "add-index",
-    "body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:unique: true}${6:, using: '${7|gin,gist,hash,btree|}'}}",
+    "body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:unique: true}${6:, using: '${7|gin,gist,hash,btree|}'}}${8:, if_not_exists: true}",
     "description": "Add Index"
   },
   "remove-index": {
     "prefix": "remove-index",
-    "body": "remove_index :${1:table_name}, name: :${2:index_name}",
+    "body": "remove_index :${1:table_name}${2:, column: %i[${3:fields}]}${4:, if_exists: true}",
     "description": "Remove Index"
   },
   "t.index": {

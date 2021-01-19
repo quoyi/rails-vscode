@@ -77,7 +77,7 @@
   },
   "add-index": {
     "prefix": "add-index",
-    "body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:options}: '${6:custom_index_name}'}",
+    "body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:unique: true}${6:, using: '${7|gin,gist,hash,btree|}'}}",
     "description": "Add Index"
   },
   "remove-index": {
@@ -132,7 +132,7 @@
   },
   "t.integer": {
     "prefix": "t.integer",
-    "body": "t.integer :${1:title}",
+    "body": "t.integer :${1:title}${2:, array: true}",
     "description": "t.integer"
   },
   "t.integer-lock": {
@@ -157,12 +157,63 @@
   },
   "t.string": {
     "prefix": "t.string",
-    "body": "t.string :${1:title}",
+    "body": "t.string :${1:title}${2:, array: true}",
     "description": "t.string (tcs)"
   },
   "t.text": {
     "prefix": "t.text",
     "body": "t.text :${1:title}",
     "description": "t.text (tct)"
+  },
+  "t.json": {
+    "prefix": "t.json",
+    "body": "t.json :${1:field}",
+    "description": "t.json"
+  },
+  "t.jsonb": {
+    "prefix": "t.jsonb",
+    "body": "t.jsonb :${1:field}",
+    "description": "t.jsonb"
+  },
+  "t.daterange": {
+    "prefix": "t.daterange",
+    "body": "t.daterange :${1:field}",
+    "description": "t.daterange"
+  },
+  "t.uuid": {
+    "prefix": "t.uuid",
+    "body": [
+      "t.uuid :${1:field}",
+      "# need `enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')`"
+    ],
+    "description": "t.uuid"
+  },
+  "t.inet": {
+    "prefix": "t.inet",
+    "body": "t.inet :${1:field}",
+    "description": "t.inet"
+  },
+  "t.cidr": {
+    "prefix": "t.cidr",
+    "body": "t.cidr :${1:field}",
+    "description": "t.cidr"
+  },
+  "t.macaddr": {
+    "prefix": "t.macaddr",
+    "body": "t.macaddr :${1:field}",
+    "description": "t.macaddr"
+  },
+  "t.interval": {
+    "prefix": "t.interval",
+    "body": "t.interval :${1:field}",
+    "description": "t.interval"
+  },
+  "t.hstore": {
+    "prefix": "t.hstore",
+    "body": [
+      "t.hstore :${1:field}",
+      "# need `enable_extension 'hstore' unless extension_enabled?('hstore')`"
+    ],
+    "description": "t.hstore"
   }
 }
